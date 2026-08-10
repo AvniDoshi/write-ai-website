@@ -291,10 +291,19 @@ h3 { line-height: 1.18; }
 .contact-form option { color: var(--ink-dark); }
 .contact-form textarea { resize: vertical; }
 .contact-form .button { justify-self: start; border-color: var(--cream); background: var(--cream); color: var(--ink-dark); }
-.contact-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
-.newsletter-form { display: grid; gap: 1.1rem; padding: 2.5rem; border: 1px solid var(--line); background: var(--paper); }
-.newsletter-form h2 { font-size: clamp(2.5rem, 4vw, 4rem); }
+.contact-columns { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 1500px; margin: 0 auto; }
+.contact-form, .newsletter-form { padding: clamp(2rem, 4vw, 4rem); }
+.contact-form h2, .newsletter-form h2 { max-width: 900px; font-size: clamp(2.35rem, 3.6vw, 3.8rem); }
+.form-heading { max-width: 1050px; }
+.contact-fields, .newsletter-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.35rem 1.75rem; }
+.field-wide { grid-column: 1 / -1; }
+.contact-form input, .contact-form select, .newsletter-form input { min-height: 58px; }
+.contact-form textarea { min-height: 240px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: .5rem; }
+.form-actions small { max-width: 620px; }
+.newsletter-form { display: grid; gap: 1.5rem; border: 1px solid var(--line); background: var(--paper); }
 .newsletter-form > div > p:not(.eyebrow) { color: var(--muted); }
+.newsletter-copy > p { max-width: 920px; }
 .newsletter-form label { display: grid; gap: .45rem; color: var(--ink); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .newsletter-form input { width: 100%; padding: .85rem; border: 1px solid var(--line); background: white; font: inherit; text-transform: none; letter-spacing: normal; }
 .newsletter-form .button { justify-self: start; }
@@ -359,4 +368,6 @@ h3 { line-height: 1.18; }
   .profile-content { grid-template-columns: 1fr; }
   .approach-grid, .five-card-grid, .service-grid, .development-list, .mission-list, .research-bullets { grid-template-columns: 1fr; }
   .newsletter-form { padding: 1.5rem; }
+  .contact-fields, .newsletter-fields { grid-template-columns: 1fr; }
+  .field-wide { grid-column: auto; }
 }
