@@ -35,7 +35,14 @@ export const peopleSections: PeopleSection[] = [
   ] },
 ];
 
-export const partnerOrganizations = ["UC Irvine", "MDRC", "American Council on Education", "California Community Colleges / Foothill-De Anza", "Virginia Community College System", "Houston Community College"];
+export const partnerOrganizations = [
+  { name: "UC Irvine", href: "https://uci.edu/" },
+  { name: "MDRC", href: "https://www.mdrc.org/" },
+  { name: "American Council on Education", href: "https://www.acenet.edu/" },
+  { name: "California Community Colleges / Foothill-De Anza", href: "https://www.fhda.edu/" },
+  { name: "Virginia Community College System", href: "https://www.vccs.edu/" },
+  { name: "Houston Community College", href: "https://www.hccs.edu/" },
+];
 
 export function getPerson(slug: string) {
   for (const section of peopleSections) {
