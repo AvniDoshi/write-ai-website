@@ -40,7 +40,7 @@ export default function AboutPage() {
       </section>
       <section className="funding-panel">
         <div><p className="eyebrow light">Funding</p><h2>$10 million grant proposal</h2></div>
-        <div><p>WRITE AI is described in a five-year, $10 million grant proposal. The proposal is under review and marked not for public distribution, so it is available by request rather than as a public download.</p><a className="button button-light" href="mailto:markw@uci.edu?subject=WRITE%20AI%20grant%20proposal%20request">Request the grant proposal →</a></div>
+        <div><p>WRITE AI is described in a five-year, $10 million grant proposal. Read the complete 35-page proposal for the research agenda, planned activities, partnerships, evaluation, and center leadership.</p><Link className="button button-light" href="/WRITE-AI-Center-Proposal.pdf" download>View grant proposal PDF →</Link></div>
       </section>
       <section className="section">
         <div className="section-heading"><p className="eyebrow">Our approach</p><h2>Better learning sits at the intersection.</h2></div>
