@@ -21,6 +21,28 @@ export default function AboutPage() {
         <h2>Research how AI can provide personalized writing support while helping students become stronger writers and responsible, critical users of AI.</h2>
       </section>
       <section className="section">
+        <div className="section-heading"><p className="eyebrow">Goals</p><h2>Build evidence, tools, and capacity for responsible AI-supported writing.</h2></div>
+        <div className="three-grid">
+          <article className="feature-card"><span>01</span><h3>Understand the landscape</h3><p>Document which generative AI tools are used for postsecondary writing, how colleges use them, and what evidence supports their adoption.</p></article>
+          <article className="feature-card"><span>02</span><h3>Develop and evaluate PapyrusAI</h3><p>Co-design a guided writing environment with community-college instructors and rigorously study its implementation and effects.</p></article>
+          <article className="feature-card"><span>03</span><h3>Advance responsible practice</h3><p>Help colleges address AI literacy, privacy, bias, fairness, academic integrity, and student agency.</p></article>
+        </div>
+      </section>
+      <section className="section activity-section">
+        <div className="section-heading"><p className="eyebrow">Activities</p><h2>From national research to practical support.</h2></div>
+        <div className="activity-list">
+          {["A public landscape study and searchable database of AI writing tools", "Participatory development with 24 instructors across six community colleges", "A planned randomized study with 60 first-year composition instructors", "Instructor case studies, implementation research, and cost analysis", "Research fellowships, monthly webinars, quarterly podcasts, briefs, and national convenings"].map((activity, index)=><div key={activity}><span>0{index+1}</span><p>{activity}</p></div>)}
+        </div>
+      </section>
+      <section className="section organizations-section">
+        <div className="section-heading"><p className="eyebrow">Organizations</p><h2>A proposed national partnership.</h2><p className="section-deck">The project brings together research, evaluation, community-college implementation, policy, communications, and software expertise.</p></div>
+        <div className="partner-grid large-partners">{["UC Irvine", "MDRC", "American Council on Education", "California Community Colleges", "Virginia Community College System", "Houston Community College"].map((name)=><span key={name}>{name}</span>)}</div>
+      </section>
+      <section className="funding-panel">
+        <div><p className="eyebrow light">Funding</p><h2>$10 million grant proposal</h2></div>
+        <div><p>WRITE AI is described in a five-year, $10 million grant proposal. The proposal is under review and marked not for public distribution, so it is available by request rather than as a public download.</p><a className="button button-light" href="mailto:markw@uci.edu?subject=WRITE%20AI%20grant%20proposal%20request">Request the grant proposal →</a></div>
+      </section>
+      <section className="section">
         <div className="section-heading"><p className="eyebrow">Our approach</p><h2>Better learning sits at the intersection.</h2></div>
         <div className="formula" aria-label="Writing plus AI plus educators plus research leads to better learning">
           {[

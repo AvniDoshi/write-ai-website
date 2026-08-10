@@ -1,30 +1,29 @@
 import type { Metadata } from "next";
+import { SiteLink as Link } from "../components/SiteLink";
 import { PageIntro } from "../components/SiteShell";
-import { partners } from "../data/site";
 
 export const metadata: Metadata = { title: "People & Partners" };
 
+const organizations = [
+  { id: "uci", name: "UC Irvine + Digital Learning Lab", description: "Center leadership, development, evaluation, engineering, and national communications.", people: [["Mark Warschauer", "Overall management + coordination"], ["Di Xu", "Pilot evaluation leadership"], ["Tamara Tate", "Development study + implementation guidance"], ["Kristi Werry", "PapyrusAI + searchable archive engineering"], ["Sabrina Look", "National communications"]] },
+  { id: "mdrc", name: "MDRC", description: "Exploratory research, evaluation expertise, research training, and evidence communication.", people: [["Alexander Mayer", "Exploratory study leadership"], ["Richard Hendra", "Research training leadership"]] },
+  { id: "california", name: "California Community Colleges", description: "Participatory implementation and professional learning in California community colleges.", people: [["Jory Hadsell", "California community-college implementation"]] },
+  { id: "virginia", name: "Virginia Community College System", description: "Project operations, leadership, outreach, and implementation across Virginia.", people: [["Justin Schultz", "Project operations + implementation"]] },
+  { id: "ace", name: "American Council on Education", description: "National higher-education leadership, policy connection, and outreach.", people: [["Hironao Okahana", "ACE project leadership"]] },
+  { id: "houston", name: "Houston Community College", description: "Community-college implementation and local coordination in Houston.", people: [["Miguel Ramos", "Houston implementation"]] },
+];
+
 export default function PeoplePage() {
-  const leaders = [
-    ["Mark Warschauer", "Overall management + coordination", "UC Irvine / Digital Learning Lab"],
-    ["Di Xu", "Pilot evaluation leadership", "UC Irvine"],
-    ["Tamara Tate", "Development study + implementation guidance", "UC Irvine / Digital Learning Lab"],
-    ["Alexander Mayer", "Exploratory study leadership", "MDRC"],
-    ["Richard Hendra", "Research training leadership", "MDRC"],
-    ["Jory Hadsell", "California community-college implementation", "Foothill–De Anza CCD"],
-    ["Justin Schultz", "Project operations + implementation", "Virginia Community College System"],
-    ["Hironao Okahana", "ACE project leadership", "American Council on Education"],
-    ["Kristi Werry", "PapyrusAI + searchable archive engineering", "Software development"],
-    ["Sabrina Look", "National communications", "UC Irvine / Digital Learning Lab"],
-    ["Miguel Ramos", "Houston implementation", "Houston Community College"],
-  ];
   return (
     <>
-      <PageIntro eyebrow="People + partners" title="A proposed center built from many kinds of expertise." description="The project narrative brings together writing, learning science, community colleges, evaluation, educational technology, ethics, policy, and national leadership." />
-      <section className="section"><div className="section-heading"><p className="eyebrow">Leadership</p><h2>Meet the team guiding the work.</h2></div><div className="people-grid">{leaders.map(([name, role, institution]) => <article key={name}><div className="person-monogram" aria-hidden="true">{name.split(" ").map((part) => part[0]).join("")}</div><h3>{name}</h3><p>{role}</p><span>{institution}</span></article>)}</div></section>
-      <section className="advisor-band"><p>Research team</p><p>Writing advisors</p><p>AI + learning advisors</p><p>Ethics advisors</p></section>
-      <section className="section"><div className="section-heading"><p className="eyebrow">Our partners</p><h2>National reach, shared purpose.</h2></div><div className="partner-grid large-partners">{partners.map((partner) => <span key={partner}>{partner}</span>)}</div></section>
-      <section className="section two-column-story"><div><p className="eyebrow">Verified DLL team</p><h2>Meet the lab behind the UCI work.</h2></div><div className="prose"><p>The Digital Learning Lab identifies Mark Warschauer as Director and Principal Investigator, Tamara Tate as Associate Director, and Sabrina Look as Director of Communications and Special Projects.</p><a className="text-link" href="https://www.digitallearninglab.org/people.html">View the current DLL team →</a></div></section>
+      <PageIntro eyebrow="People + organizations" title="A national partnership with many kinds of expertise." description="Use the organization menu to move directly to each proposed partner team and its role in WRITE AI." />
+      <section className="section people-directory">
+        <aside className="organization-nav"><p className="eyebrow">Organizations</p>{organizations.map((org)=><Link href={`#${org.id}`} key={org.id}>{org.name}</Link>)}</aside>
+        <div className="organization-sections">
+          {organizations.map((org, index)=><section className="organization-section" id={org.id} key={org.id}><p className="resource-kicker">0{index+1} · Organization</p><h2>{org.name}</h2><p className="section-deck">{org.description}</p><div className="organization-people">{org.people.map(([name, role])=><article key={name}><div className="person-monogram compact" aria-hidden="true">{name.split(" ").map((part)=>part[0]).join("")}</div><div><h3>{name}</h3><p>{role}</p></div></article>)}</div></section>)}
+        </div>
+      </section>
+      <section className="section dll-team-link"><div><p className="eyebrow">Current lab team</p><h2>See the full Digital Learning Lab directory.</h2></div><div><p>The DLL maintains the current list of its leadership, researchers, graduate students, collaborators, and alumni.</p><Link className="button button-ghost" href="https://www.digitallearninglab.org/people.html">View the DLL team →</Link></div></section>
     </>
   );
 }

@@ -4,7 +4,6 @@ const nav = [
   ["About", "/about"],
   ["Research", "/research"],
   ["PapyrusAI", "/papyrus-ai"],
-  ["Resources", "/resources"],
   ["Training & Events", "/training-events"],
   ["News", "/news"],
   ["People", "/people"],
@@ -13,10 +12,6 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="announcement">
-        <span>National research center</span>
-        <span className="announcement-copy">Writing education + generative AI</span>
-      </div>
       <div className="nav-wrap">
         <Link className="wordmark" href="/" aria-label="WRITE AI home">
           <span className="wordmark-main">WRITE AI</span>
@@ -29,8 +24,8 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link className="button button-small" href="/ai-tools">
-          Explore AI tools <span aria-hidden="true">↗</span>
+        <Link className="button button-small" href="/contact">
+          Stay in touch <span aria-hidden="true">→</span>
         </Link>
         <details className="mobile-menu">
           <summary aria-label="Open navigation">Menu</summary>
@@ -40,7 +35,7 @@ export function SiteHeader() {
                 {label}
               </Link>
             ))}
-            <Link href="/ai-tools">Explore AI tools</Link>
+            <Link href="/contact">Stay in touch</Link>
           </nav>
         </details>
       </div>
@@ -75,7 +70,7 @@ export function SiteFooter() {
           <strong>Center</strong>
           <Link href="/about">About</Link>
           <Link href="/people">People & Partners</Link>
-          <a href="mailto:writeai@uci.edu">Contact</a>
+          <Link href="/contact">Stay in touch</Link>
         </div>
       </div>
       <div className="footer-bottom">

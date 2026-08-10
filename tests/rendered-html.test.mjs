@@ -31,8 +31,10 @@ test("server-renders primary public routes", async () => {
     ["/research", /Building an evidence base/],
     ["/papyrus-ai", /helps students write/],
     ["/ai-tools", /Explore AI tools/],
-    ["/resources", /Evidence made useful/],
-    ["/people", /many kinds of expertise/],
+    ["/resources", /Practical resources for writing and AI/],
+    ["/training-events", /Upcoming and planned/],
+    ["/people", /national partnership/],
+    ["/contact", /Follow the work/],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
