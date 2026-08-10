@@ -1,44 +1,10 @@
 import { SiteLink as Link } from "./SiteLink";
-
-const nav = [
-  ["About", "/about"],
-  ["Research", "/research"],
-  ["PapyrusAI", "/papyrus-ai"],
-  ["Training & Events", "/training-events"],
-  ["News", "/news"],
-  ["People", "/people"],
-];
+import { ActiveNavigation } from "./ActiveNavigation";
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="nav-wrap">
-        <Link className="wordmark" href="/" aria-label="WRITE AI home">
-          <span className="wordmark-main">WRITE AI</span>
-          <span className="wordmark-sub">CENTER</span>
-        </Link>
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {nav.map(([label, href]) => (
-            <Link key={href} href={href}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-        <Link className="button button-small" href="/contact">
-          Stay in touch <span aria-hidden="true">→</span>
-        </Link>
-        <details className="mobile-menu">
-          <summary aria-label="Open navigation">Menu</summary>
-          <nav aria-label="Mobile navigation">
-            {nav.map(([label, href]) => (
-              <Link key={href} href={href}>
-                {label}
-              </Link>
-            ))}
-            <Link href="/contact">Stay in touch</Link>
-          </nav>
-        </details>
-      </div>
+      <ActiveNavigation />
     </header>
   );
 }
