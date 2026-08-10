@@ -99,9 +99,9 @@ h3 { line-height: 1.18; }
 .partners-section h2 { font-size: clamp(2.5rem, 4vw, 4.2rem); }
 .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(24,59,74,.25); border-left: 1px solid rgba(24,59,74,.25); }
 .partner-grid span { min-height: 105px; display: grid; place-items: center; padding: 1rem; border-right: 1px solid rgba(24,59,74,.25); border-bottom: 1px solid rgba(24,59,74,.25); font-family: Georgia, serif; font-size: 1.05rem; text-align: center; }
-.page-intro { padding: 4.25rem max(9vw, 1.5rem) 3.75rem; background: var(--sky); }
+.page-intro { padding: 3.75rem max(9vw, 1.5rem); background: var(--sky); }
 .page-intro h1 { max-width: 900px; margin-bottom: 1.15rem; font-size: clamp(2.6rem, 4.5vw, 4.5rem); }
-.compact-intro { padding: 4.25rem max(9vw, 1.5rem) 3.75rem; background: var(--sky); }
+.compact-intro { padding: 3.75rem max(9vw, 1.5rem); background: var(--sky); }
 .compact-intro h1 { margin-bottom: 1rem; font-size: clamp(2.6rem, 4.5vw, 4.5rem); }
 .compact-intro > p:last-child { max-width: 820px; margin: 0; color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
 .institutional-section { background: var(--sky-light); }

@@ -48,7 +48,6 @@ export function SiteFooter() {
 }
 
 export function PageIntro({
-  eyebrow,
   title,
   description,
 }: {
@@ -58,7 +57,6 @@ export function PageIntro({
 }) {
   return (
     <section className="page-intro">
-      <p className="eyebrow">{eyebrow}</p>
       <h1>{title}</h1>
       <p className="page-deck">{description}</p>
     </section>
