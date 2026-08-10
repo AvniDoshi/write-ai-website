@@ -312,14 +312,14 @@ h3 { line-height: 1.18; }
 .newsletter-empty { max-width: 760px; padding: 2rem; border: 1px solid var(--line); background: var(--paper); }
 .newsletter-empty h3 { margin-bottom: .5rem; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 500; }
 .newsletter-empty p { margin: 0; color: var(--muted); }
-.site-footer { padding: 6rem max(6vw, 1.5rem) 2rem; background: var(--ink-dark); color: white; }
-.footer-lead { max-width: 850px; padding-bottom: 4rem; }
-.footer-lead h2 { font-size: clamp(3rem, 5.5vw, 5.5rem); }
-.light-link { color: white; }
-.footer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,.2); }
-.footer-grid div { display: grid; align-content: start; gap: .6rem; color: #c5d7dd; font-size: .85rem; }
-.footer-grid strong { margin-bottom: .6rem; color: var(--gold); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
-.footer-bottom { display: flex; justify-content: space-between; gap: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,.2); color: #9eb4bc; font-size: .72rem; }
+.site-footer { padding: 2.25rem max(6vw, 1.5rem) 1.25rem; background: var(--ink-dark); color: white; }
+.footer-main { display: flex; justify-content: space-between; gap: 2rem 4rem; align-items: center; padding-bottom: 1.6rem; }
+.footer-brand { display: grid; gap: .35rem; }
+.footer-brand strong { color: var(--gold); font-size: .72rem; letter-spacing: .14em; }
+.footer-brand span { color: #c5d7dd; font-size: .86rem; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .8rem 1.5rem; color: #e3eef3; font-size: .82rem; font-weight: 700; }
+.footer-links a:hover, .footer-links a:focus-visible { color: var(--gold); }
+.footer-bottom { padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); color: #9eb4bc; font-size: .7rem; }
 
 @media (max-width: 1100px) {
   .desktop-nav { display: none; }
@@ -357,8 +357,8 @@ h3 { line-height: 1.18; }
   .resource-list article > b { grid-column: 2; }
   .audience-strip, .advisor-band, .large-partners { grid-template-columns: repeat(2,1fr); }
   .event-date { padding: 2rem; border: 0; border-top: 1px solid rgba(255,255,255,.3); }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-bottom { flex-direction: column; }
+  .footer-main { align-items: flex-start; flex-direction: column; }
+  .footer-links { justify-content: flex-start; }
   .event-card { grid-template-columns: 1fr; }
   .calendar-date { min-height: 160px; }
   .resource-link-grid, .organization-people { grid-template-columns: 1fr; }
