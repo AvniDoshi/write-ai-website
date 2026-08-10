@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteLink as Link } from "../components/SiteLink";
 import { PageIntro } from "../components/SiteShell";
 
 export const metadata: Metadata = { title: "About" };
@@ -35,6 +36,10 @@ export default function AboutPage() {
           <article><span>02</span><h3>How can a guided AI writing tool best support community-college instruction and student outcomes?</h3></article>
           <article><span>03</span><h3>How can institutions mitigate risks, biases, privacy concerns, and ethical challenges?</h3></article>
         </div>
+      </section>
+      <section className="section two-column-story">
+        <div><p className="eyebrow">Research home</p><h2>Connected to UC Irvine’s Digital Learning Lab.</h2></div>
+        <div className="prose"><p>The Digital Learning Lab studies learning from early childhood through graduate education and develops tools and resources that expand digital learning opportunities. Its current work includes responsible generative AI integration across K–12 and higher education.</p><p>WRITE AI extends that human-centered research agenda into postsecondary writing, with a particular focus on community colleges.</p><Link className="text-link" href="https://www.digitallearninglab.org/">Visit the Digital Learning Lab →</Link></div>
       </section>
     </>
   );

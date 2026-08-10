@@ -33,6 +33,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">The proposed program at a glance</p>
+          <h2>Evidence built with community colleges, not just for them.</h2>
+          <p className="section-deck">WRITE AI is designed as a five-year research and capacity-building program. These figures describe the work proposed in the project narrative.</p>
+        </div>
+        <div className="four-grid">
+          {[
+            ["100", "AI tools targeted for the public landscape database"],
+            ["6", "community colleges participating in early co-design"],
+            ["24", "instructors contributing to iterative development"],
+            ["60", "first-year composition instructors in the planned trial"],
+          ].map(([number, copy]) => <article className="function-card" key={number}><span className="card-index">{number}</span><p>{copy}</p></article>)}
+        </div>
+      </section>
+
       <section className="statement band">
         <p>The future of writing isn’t human <em>or</em> AI.</p>
         <h2>It’s learning how to use both.</h2>
@@ -115,7 +131,7 @@ export default function Home() {
       <section className="section resource-preview">
         <div className="section-heading split-heading">
           <div>
-            <p className="eyebrow">Latest research + resources</p>
+          <p className="eyebrow">Planned research + resources</p>
             <h2>Evidence you can use.</h2>
           </div>
           <Link className="text-link" href="/resources">

@@ -76,24 +76,24 @@ export const partners = [
 
 export const resources = [
   {
-    type: "Research brief",
-    title: "AI literacy in college writing",
+    type: "Planned public database",
+    title: "AI tools for postsecondary writing",
     summary:
-      "A practical account of what students need to use generative AI critically and responsibly.",
-    audience: "Educators",
+      "Searchable records for up to 100 widely used tools, including features, cost, infrastructure, training, safety, fairness, and available evidence.",
+    audience: "Educators + institutions",
   },
   {
-    type: "Implementation guide",
-    title: "Preparing to use AI in writing courses",
+    type: "Planned implementation guide",
+    title: "Implementing PapyrusAI in community colleges",
     summary:
-      "Questions for evaluating instructional fit, infrastructure, training, privacy, and student support.",
-    audience: "Institutions",
+      "Practical guidance informed by co-design, a randomized study, instructor case studies, and implementation research.",
+    audience: "Instructors + colleges",
   },
   {
-    type: "Evaluation framework",
-    title: "Studying AI-supported writing",
+    type: "Planned evaluation framework",
+    title: "Evaluating AI in postsecondary instruction",
     summary:
-      "A developing framework for meaningful, ethical evaluation of AI in postsecondary instruction.",
-    audience: "Researchers",
+      "A field-facing framework for rigorous, ethical evaluation of AI-supported teaching and learning, planned for the fourth project year.",
+    audience: "Researchers + developers",
   },
 ];
