@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SiteLink as Link } from "./SiteLink";
 
 const nav = [
   ["About", "/about"],

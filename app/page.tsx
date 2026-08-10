@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SiteLink as Link } from "./components/SiteLink";
 import { partners, researchAreas, resources } from "./data/site";
 
 export default function Home() {
