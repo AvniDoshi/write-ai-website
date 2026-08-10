@@ -33,7 +33,8 @@ test("server-renders primary public routes", async () => {
     ["/ai-tools", /Explore AI tools/],
     ["/resources", /Practical resources for writing and AI/],
     ["/training-events", /Upcoming and planned/],
-    ["/people", /national partnership/],
+    ["/people", /UC Irvine \+ Digital Learning Lab/],
+    ["/people/mark-warschauer", /Role in the center/],
     ["/contact", /Follow the work/],
   ]) {
     const response = await render(path);
