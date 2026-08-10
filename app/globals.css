@@ -24,8 +24,8 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; lette
 h3 { line-height: 1.18; }
 .skip-link { position: fixed; top: 0; left: 1rem; z-index: 100; padding: .75rem 1rem; background: white; transform: translateY(-120%); }
 .skip-link:focus { transform: translateY(0); }
-.site-header { position: sticky; top: 0; z-index: 50; height: 0; padding-top: .85rem; pointer-events: none; }
-.nav-wrap { width: min(94vw, 1460px); height: 78px; margin: 0 auto; display: flex; align-items: center; gap: 2rem; padding: 0 1.35rem; border: 1px solid rgba(24,59,74,.16); border-radius: 18px; background: rgba(255,254,249,.92); box-shadow: 0 16px 45px rgba(14,42,54,.13); backdrop-filter: blur(18px); pointer-events: auto; }
+.site-header { position: relative; z-index: 50; }
+.nav-wrap { height: 88px; display: flex; align-items: center; gap: 2rem; padding: 0 max(5vw, 1.25rem); border-bottom: 1px solid rgba(24,59,74,.15); background: rgba(250,248,241,.96); }
 .wordmark { display: flex; align-items: baseline; gap: .45rem; margin-right: auto; }
 .wordmark-main { color: var(--blue); font-size: 1.55rem; font-weight: 800; letter-spacing: -.06em; }
 .wordmark-sub { color: var(--orange); font-size: .58rem; font-weight: 800; letter-spacing: .18em; }
@@ -93,7 +93,7 @@ h3 { line-height: 1.18; }
 .partners-section h2 { font-size: clamp(2.5rem, 4vw, 4.2rem); }
 .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(24,59,74,.25); border-left: 1px solid rgba(24,59,74,.25); }
 .partner-grid span { min-height: 105px; display: grid; place-items: center; padding: 1rem; border-right: 1px solid rgba(24,59,74,.25); border-bottom: 1px solid rgba(24,59,74,.25); font-family: Georgia, serif; font-size: 1.05rem; text-align: center; }
-.page-intro { padding: 10rem max(9vw, 1.5rem) 6rem; background: var(--sky); }
+.page-intro { padding: 7rem max(9vw, 1.5rem) 6rem; background: var(--sky); }
 .page-intro h1 { max-width: 1050px; margin-bottom: 1.5rem; font-size: clamp(3.5rem, 7vw, 7rem); }
 .two-column-story { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; }
 .prose { max-width: 650px; color: var(--muted); font-size: 1.2rem; }
@@ -259,9 +259,8 @@ h3 { line-height: 1.18; }
 
 @media (max-width: 760px) {
   .nav-wrap > .button { display: none; }
-  .site-header { padding-top: .55rem; }
-  .nav-wrap { width: calc(100vw - 1rem); height: 66px; padding: 0 1rem; border-radius: 14px; }
-  .hero { min-height: auto; padding-top: 7rem; }
+  .nav-wrap { height: 74px; }
+  .hero { min-height: auto; padding-top: 4rem; }
   .hero h1 { font-size: clamp(3.3rem, 16vw, 5.3rem); }
   .hero-visual { min-height: 340px; }
   .concept-writing { width: 92px; height: 92px; }
