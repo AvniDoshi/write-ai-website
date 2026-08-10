@@ -4,59 +4,14 @@ import { PageIntro } from "../components/SiteShell";
 
 export const metadata: Metadata = { title: "Training & Events" };
 
-const events = [
-  {
-    month: "SEP",
-    day: "29",
-    year: "2026",
-    status: "Registration open",
-    title: "AI in Higher Education course begins",
-    description: "A synchronous UCI course for postsecondary instructors and instructional-support professionals. Meets Tuesdays, 4:00–5:30 p.m. Pacific, through December 1.",
-    href: "https://www.digitallearninglab.org/ai-in-higher-education.html",
-    label: "Course details",
-  },
-  {
-    month: "MONTHLY",
-    day: "—",
-    year: "Planned",
-    status: "Dates forthcoming",
-    title: "WRITE AI research webinars",
-    description: "Planned public conversations connecting emerging evidence with the practical needs of educators, researchers, and institutions.",
-    href: "/contact",
-    label: "Get updates",
-  },
-  {
-    month: "YEARS",
-    day: "2 + 4",
-    year: "Planned",
-    status: "Dates forthcoming",
-    title: "National stakeholder convenings",
-    description: "Two proposed gatherings for 75–100 researchers, educators, policymakers, students, developers, and institutional leaders.",
-    href: "/contact",
-    label: "Join the mailing list",
-  },
-];
-
 export default function TrainingPage() {
-  return (
-    <>
-      <PageIntro eyebrow="Training + events" title="Learn, connect, and build the field." description="A calendar of verified Digital Learning Lab opportunities and planned WRITE AI programs. New dates will be added as they are confirmed." />
-      <section className="section events-section">
-        <div className="section-heading split-heading"><div><p className="eyebrow">Calendar</p><h2>Upcoming and planned.</h2></div><p>Check back for updates. Programs described as planned are part of the proposed WRITE AI center and do not yet have confirmed dates.</p></div>
-        <div className="event-calendar">
-          {events.map((event) => (
-            <article className="event-card" key={event.title}>
-              <div className="calendar-date"><span>{event.month}</span><strong>{event.day}</strong><small>{event.year}</small></div>
-              <div className="event-card-copy"><p className="resource-kicker">{event.status}</p><h2>{event.title}</h2><p>{event.description}</p><Link className="text-link" href={event.href}>{event.label} →</Link></div>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">Research Fellows Program</p><h2>Train the people who will build the next evidence base.</h2><p className="section-deck">A proposed program for researchers, educators, institutional researchers, EdTech professionals, and graduate students.</p></div>
-        <div className="topic-grid">{["AI evaluation frameworks", "RCTs + A/B testing", "Engagement analytics", "Research data management", "Mixed-methods research", "Bias + ethics"].map((topic, index) => <div key={topic}><span>0{index + 1}</span><strong>{topic}</strong></div>)}</div>
-      </section>
-      <section className="professional-learning"><div><p className="eyebrow">Professional development</p><h2>Practical learning for educators.</h2></div><div><p>Planned outreach includes monthly webinars, annual research briefs, a quarterly podcast series with MDRC’s Evidence First, and a professional-development certificate offered through @ONE.</p><Link className="button button-light" href="https://www.digitallearninglab.org/custom-professional-learning.html">DLL professional learning →</Link></div></section>
-    </>
-  );
+  return <>
+    <PageIntro eyebrow="Training + events" title="Training & Events" description="WRITE AI supports researchers, educators, and institutional leaders in building the knowledge and skills needed to evaluate and use generative AI in postsecondary education." />
+    <section className="section two-column-story"><div><p className="eyebrow">WRITE AI Fellows Program</p><h2>Strengthening national research capacity.</h2></div><div className="prose"><p>The proposed WRITE AI Fellows Program will train 40 researchers, educators, and institutional leaders across two cohorts.</p><p>Participants will engage in a virtual-first program combining expert-led training, collaborative learning, research resources, technical assistance, and opportunities to connect with others working in AI and education.</p></div></section>
+    <section className="section institutional-section"><div className="section-heading"><p className="eyebrow">Training areas</p><h2>Methods for studying AI-supported education.</h2></div><div className="topic-grid">{[["AI Evaluation","Learning outcomes, implementation, and effectiveness."],["Causal Research","Randomized controlled trials and A/B testing."],["Engagement and Tool Behavior","How students interact with AI systems."],["Research Data and Privacy","Managing AI-generated data responsibly and securely."],["Mixed-Methods Research","Combining quantitative and qualitative approaches."],["Ethics and Bias","Identifying harms and evaluating responsible AI practices."]].map(([title,copy],index)=><div key={title}><span>0{index+1}</span><strong>{title}</strong><p>{copy}</p></div>)}</div></section>
+    <section className="section"><div className="section-heading"><p className="eyebrow">Professional development</p><h2>Supporting postsecondary educators.</h2><p className="section-deck">Professional learning will focus on understanding AI-assisted writing, selecting appropriate tools, integrating AI into course design, developing guidelines for student use, supporting AI literacy, addressing ethical issues, and adapting writing assessment.</p></div><Link className="button button-ghost" href="https://www.digitallearninglab.org/custom-professional-learning.html">Explore DLL professional learning →</Link></section>
+    <section className="section institutional-section"><div className="section-heading"><p className="eyebrow">Webinars</p><h2>Emerging issues in AI-supported learning.</h2><p className="section-deck">WRITE AI plans to host and contribute to educational webinars, with recordings made available for broader access.</p></div><ul className="development-list"><li>Academic Integrity</li><li>Student AI Literacy</li><li>AI-Supported Writing Feedback</li><li>Institutional AI Adoption</li><li>Responsible AI</li></ul></section>
+    <section className="section two-column-story"><div><p className="eyebrow">Events and convenings</p><h2>Bringing research, policy, and practice together.</h2></div><div className="prose"><p>WRITE AI will participate in and organize national events for researchers, educators, policymakers, institutional leaders, and technology developers.</p><p>These gatherings will support the exchange of research findings, promising practices, research priorities, and evidence-based guidance for AI in higher education.</p></div></section>
+    <section className="section events-section"><div className="section-heading"><p className="eyebrow">Upcoming events</p><h2>Confirmed opportunities.</h2></div><div className="event-calendar"><article className="event-card"><div className="calendar-date"><span>SEP</span><strong>29</strong><small>2026</small></div><div className="event-card-copy"><p className="resource-kicker">Virtual · Registration open</p><h2>AI in Higher Education</h2><p>A synchronous UCI course for postsecondary instructors and instructional-support professionals, meeting Tuesdays from 4:00–5:30 p.m. Pacific through December 1.</p><Link className="text-link" href="https://www.digitallearninglab.org/ai-in-higher-education.html">Course details and registration →</Link></div></article></div></section>
+  </>;
 }

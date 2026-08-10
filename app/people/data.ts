@@ -1,46 +1,46 @@
-export type Person = {
-  slug: string;
-  name: string;
-  role: string;
-};
+export type Person = { slug: string; name: string; role: string; institution: string };
+export type PeopleSection = { id: string; name: string; people: Person[] };
 
-export type Organization = {
-  id: string;
-  name: string;
-  description: string;
-  people: Person[];
-};
-
-export const organizations: Organization[] = [
-  { id: "uci", name: "UC Irvine + Digital Learning Lab", description: "Center leadership, development, evaluation, engineering, and national communications.", people: [
-    { slug: "mark-warschauer", name: "Mark Warschauer", role: "Overall management + coordination" },
-    { slug: "di-xu", name: "Di Xu", role: "Pilot evaluation leadership" },
-    { slug: "tamara-tate", name: "Tamara Tate", role: "Development study + implementation guidance" },
-    { slug: "kristi-werry", name: "Kristi Werry", role: "PapyrusAI + searchable archive engineering" },
-    { slug: "sabrina-look", name: "Sabrina Look", role: "National communications" },
+export const peopleSections: PeopleSection[] = [
+  { id: "leadership", name: "Leadership", people: [
+    { slug: "mark-warschauer", name: "Mark Warschauer", role: "Principal Investigator", institution: "University of California, Irvine" },
+    { slug: "di-xu", name: "Di Xu", role: "Co-Principal Investigator", institution: "University of California, Irvine" },
+    { slug: "tamara-tate", name: "Tamara Tate", role: "Co-Principal Investigator", institution: "University of California, Irvine" },
+    { slug: "alexander-mayer", name: "Alexander Mayer", role: "Co-Principal Investigator", institution: "MDRC" },
+    { slug: "richard-hendra", name: "Richard Hendra", role: "Co-Principal Investigator", institution: "MDRC" },
+    { slug: "jory-hadsell", name: "Jory Hadsell", role: "Co-Principal Investigator", institution: "Foothill-De Anza Community College District" },
+    { slug: "justin-schultz", name: "Justin Schultz", role: "Co-Principal Investigator", institution: "Foothill-De Anza Community College District" },
+    { slug: "hironao-okahana", name: "Hironao Okahana", role: "Co-Principal Investigator", institution: "American Council on Education" },
+    { slug: "sheri-prupis", name: "Sheri Prupis", role: "Co-Principal Investigator", institution: "Virginia Community College System" },
   ] },
-  { id: "mdrc", name: "MDRC", description: "Exploratory research, evaluation expertise, research training, and evidence communication.", people: [
-    { slug: "alexander-mayer", name: "Alexander Mayer", role: "Exploratory study leadership" },
-    { slug: "richard-hendra", name: "Richard Hendra", role: "Research training leadership" },
+  { id: "research-development", name: "Research and Development Team", people: [
+    { slug: "michael-hebert", name: "Michael Hebert", role: "Writing Evaluation", institution: "WRITE AI" },
+    { slug: "cristina-lopes", name: "Cristina Lopes", role: "Generative AI and Software Development", institution: "University of California, Irvine" },
+    { slug: "beth-harnick-shapiro", name: "Beth Harnick-Shapiro", role: "Disciplinary Writing", institution: "University of California, Irvine" },
+    { slug: "penelope-collins", name: "Penelope Collins", role: "Developmental Writing", institution: "University of California, Irvine" },
+    { slug: "kristi-werry", name: "Kristi Werry", role: "Software Engineering", institution: "University of California, Irvine" },
   ] },
-  { id: "california", name: "California Community Colleges", description: "Participatory implementation and professional learning in California community colleges.", people: [
-    { slug: "jory-hadsell", name: "Jory Hadsell", role: "California community-college implementation" },
+  { id: "writing-advisors", name: "Writing Advisors", people: [
+    { slug: "charles-macarthur", name: "Charles MacArthur", role: "Writing Advisor", institution: "University of Delaware" },
+    { slug: "steve-graham", name: "Steve Graham", role: "Writing Advisor", institution: "Arizona State University" },
+    { slug: "anna-mills", name: "Anna Mills", role: "Writing Advisor", institution: "College of Marin / MyEssayFeedback" },
   ] },
-  { id: "virginia", name: "Virginia Community College System", description: "Project operations, leadership, outreach, and implementation across Virginia.", people: [
-    { slug: "justin-schultz", name: "Justin Schultz", role: "Project operations + implementation" },
+  { id: "ai-learning-advisors", name: "AI and Learning Advisors", people: [
+    { slug: "ryan-baker", name: "Ryan Baker", role: "AI and Learning Advisor", institution: "University of Pennsylvania" },
+    { slug: "danielle-mcnamara", name: "Danielle McNamara", role: "AI and Learning Advisor", institution: "Arizona State University" },
   ] },
-  { id: "ace", name: "American Council on Education", description: "National higher-education leadership, policy connection, and outreach.", people: [
-    { slug: "hironao-okahana", name: "Hironao Okahana", role: "ACE project leadership" },
-  ] },
-  { id: "houston", name: "Houston Community College", description: "Community-college implementation and local coordination in Houston.", people: [
-    { slug: "miguel-ramos", name: "Miguel Ramos", role: "Houston implementation" },
+  { id: "ethics-advisors", name: "Ethics Advisors", people: [
+    { slug: "renzhe-yu", name: "Renzhe Yu", role: "Ethics Advisor", institution: "Teachers College, Columbia University" },
+    { slug: "fred-oswald", name: "Fred Oswald", role: "Ethics Advisor", institution: "Rice University" },
   ] },
 ];
 
+export const partnerOrganizations = ["UC Irvine", "MDRC", "American Council on Education", "California Community Colleges / Foothill-De Anza", "Virginia Community College System", "Houston Community College"];
+
 export function getPerson(slug: string) {
-  for (const organization of organizations) {
-    const person = organization.people.find((candidate) => candidate.slug === slug);
-    if (person) return { ...person, organization };
+  for (const section of peopleSections) {
+    const person = section.people.find((candidate) => candidate.slug === slug);
+    if (person) return { ...person, section };
   }
   return undefined;
 }

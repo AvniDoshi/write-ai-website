@@ -1,68 +1,26 @@
 import type { Metadata } from "next";
 import { SiteLink as Link } from "../components/SiteLink";
 import { PageIntro } from "../components/SiteShell";
+import { partners } from "../data/site";
 
 export const metadata: Metadata = { title: "About" };
 
+const approaches = [
+  ["Research Driven", "We use rigorous qualitative and quantitative research to understand what works, for whom, and under what conditions."],
+  ["Human Centered", "Students and educators help shape the tools, resources, and implementation approaches we study."],
+  ["Teacher in the Loop", "Generative AI is treated as a support for educator expertise, not a replacement for it."],
+  ["Responsible by Design", "Our work considers privacy, bias, fairness, academic integrity, student agency, and appropriate reliance on AI."],
+  ["Built for Practice", "We aim to turn findings into usable resources for colleges, instructors, researchers, and policymakers."],
+];
+
 export default function AboutPage() {
-  return (
-    <>
-      <PageIntro
-        eyebrow="Why WRITE AI exists"
-        title="Writing still matters. How we teach it must evolve."
-        description="WRITE AI brings researchers, educators, institutions, and technology specialists together to learn how generative AI can strengthen writing education without weakening student thinking."
-      />
-      <section className="section two-column-story">
-        <div><p className="eyebrow">The challenge</p><h2>Individual feedback is essential—and difficult to scale.</h2></div>
-        <div className="prose"><p>Writing develops through planning, practice, feedback, and revision. Yet instructors often lack the time and resources to give every student frequent, individualized support.</p><p>Generative AI may help close that gap, but poorly designed use can also allow students to bypass the very thinking that writing is meant to develop.</p></div>
-      </section>
-      <section className="mission-panel">
-        <p className="eyebrow light">Our mission</p>
-        <h2>Research how AI can provide personalized writing support while helping students become stronger writers and responsible, critical users of AI.</h2>
-      </section>
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">Goals</p><h2>Build evidence, tools, and capacity for responsible AI-supported writing.</h2></div>
-        <div className="three-grid">
-          <article className="feature-card"><span>01</span><h3>Understand the landscape</h3><p>Document which generative AI tools are used for postsecondary writing, how colleges use them, and what evidence supports their adoption.</p></article>
-          <article className="feature-card"><span>02</span><h3>Develop and evaluate PapyrusAI</h3><p>Co-design a guided writing environment with community-college instructors and rigorously study its implementation and effects.</p></article>
-          <article className="feature-card"><span>03</span><h3>Advance responsible practice</h3><p>Help colleges address AI literacy, privacy, bias, fairness, academic integrity, and student agency.</p></article>
-        </div>
-      </section>
-      <section className="section activity-section">
-        <div className="section-heading"><p className="eyebrow">Activities</p><h2>From national research to practical support.</h2></div>
-        <div className="activity-list">
-          {["A public landscape study and searchable database of AI writing tools", "Participatory development with 24 instructors across six community colleges", "A planned randomized study with 60 first-year composition instructors", "Instructor case studies, implementation research, and cost analysis", "Research fellowships, monthly webinars, quarterly podcasts, briefs, and national convenings"].map((activity, index)=><div key={activity}><span>0{index+1}</span><p>{activity}</p></div>)}
-        </div>
-      </section>
-      <section className="section organizations-section">
-        <div className="section-heading"><p className="eyebrow">Organizations</p><h2>A proposed national partnership.</h2><p className="section-deck">The project brings together research, evaluation, community-college implementation, policy, communications, and software expertise.</p></div>
-        <div className="partner-grid large-partners">{["UC Irvine", "MDRC", "American Council on Education", "California Community Colleges", "Virginia Community College System", "Houston Community College"].map((name)=><span key={name}>{name}</span>)}</div>
-      </section>
-      <section className="funding-panel">
-        <div><p className="eyebrow light">Funding</p><h2>$10 million grant proposal</h2></div>
-        <div><p>WRITE AI is described in a five-year, $10 million grant proposal. Read the complete 35-page proposal for the research agenda, planned activities, partnerships, evaluation, and center leadership.</p><Link className="button button-light" href="/WRITE-AI-Center-Proposal.pdf" download>View grant proposal PDF →</Link></div>
-      </section>
-      <section className="section">
-        <div className="section-heading"><p className="eyebrow">Our approach</p><h2>Better learning sits at the intersection.</h2></div>
-        <div className="formula" aria-label="Writing plus AI plus educators plus research leads to better learning">
-          {[
-            ["Writing", "The durable skill"], ["AI", "The emerging tool"], ["Educators", "The essential guides"], ["Research", "The evidence base"],
-          ].map(([title, copy]) => <div key={title}><strong>{title}</strong><span>{copy}</span></div>)}
-          <b>Better learning</b>
-        </div>
-      </section>
-      <section className="section questions-section">
-        <p className="eyebrow">Our guiding questions</p>
-        <div className="question-list">
-          <article><span>01</span><h3>What generative AI tools are colleges using for writing, and what matters for instructional adoption?</h3></article>
-          <article><span>02</span><h3>How can a guided AI writing tool best support community-college instruction and student outcomes?</h3></article>
-          <article><span>03</span><h3>How can institutions mitigate risks, biases, privacy concerns, and ethical challenges?</h3></article>
-        </div>
-      </section>
-      <section className="section two-column-story">
-        <div><p className="eyebrow">Research home</p><h2>Connected to UC Irvine’s Digital Learning Lab.</h2></div>
-        <div className="prose"><p>The Digital Learning Lab studies learning from early childhood through graduate education and develops tools and resources that expand digital learning opportunities. Its current work includes responsible generative AI integration across K–12 and higher education.</p><p>WRITE AI extends that human-centered research agenda into postsecondary writing, with a particular focus on community colleges.</p><Link className="text-link" href="https://www.digitallearninglab.org/">Visit the Digital Learning Lab →</Link></div>
-      </section>
-    </>
-  );
+  return <>
+    <PageIntro eyebrow="About WRITE AI" title="About WRITE AI" description="The National Center for Writing Research to Improve Teaching Effectiveness with Generative AI. WRITE AI is focused on building the research, tools, and capacity needed to support effective and responsible uses of generative AI in postsecondary writing instruction." />
+    <section className="section two-column-story"><div><p className="eyebrow">The challenge</p><h2>Personalized support is difficult to scale.</h2></div><div className="prose"><p>Writing is a process-based skill that develops through practice, guidance, feedback, and revision.</p><p>Yet instructors often teach multiple courses with limited time and resources, making it difficult to provide every student with timely, detailed, and individualized support. These challenges can be especially significant in community colleges, where students and instructors may also have less access to traditional writing support and technology resources.</p><p>Generative AI may help expand access to personalized support, but it also creates risks related to overreliance, privacy, bias, ethics, and authenticity.</p></div></section>
+    <section className="mission-panel"><p className="eyebrow light">Our mission</p><h2>Improve postsecondary writing instruction through effective, responsible, and equitable uses of generative AI.</h2><ul className="mission-list"><li>Strengthen student writing</li><li>Support instructors</li><li>Build student and educator AI literacy</li><li>Preserve student agency and learning</li><li>Address privacy, bias, fairness, and ethical concerns</li></ul><p>The Center places particular emphasis on community colleges and expanding access to personalized writing support.</p></section>
+    <section className="section"><div className="section-heading"><p className="eyebrow">Our approach</p><h2>Rigorous research designed for practice.</h2></div><div className="approach-grid">{approaches.map(([title,copy])=><article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+    <section className="section institutional-section"><div className="section-heading"><p className="eyebrow">Who we serve</p><h2>Evidence for the people shaping AI and writing.</h2></div><div className="service-grid">{[["Students","Learning to write and use AI critically."],["Educators","Making decisions about how AI fits into instruction."],["Researchers","Evaluating AI-supported teaching and learning."],["Institutional leaders","Considering AI adoption and implementation."],["Policymakers","Seeking evidence for responsible AI use in higher education."],["Technology developers","Designing educational AI tools."]].map(([title,copy])=><article key={title}><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+    <section className="section"><div className="section-heading"><p className="eyebrow">Our partners</p><h2>A collaborative national effort.</h2><p className="section-deck">Organizations contribute complementary expertise in research, higher education, writing, technology, evaluation, and national leadership.</p></div><div className="partner-grid large-partners">{partners.map((partner)=><span key={partner}>{partner}</span>)}</div></section>
+    <section className="funding-panel"><div><p className="eyebrow light">Funding</p><h2>$10 million grant proposal</h2></div><div><p>WRITE AI is described in a five-year, $10 million proposal covering the research agenda, activities, partnerships, evaluation, and center leadership.</p><Link className="button button-light" href="/WRITE-AI-Center-Proposal.pdf" download>View grant proposal PDF →</Link></div></section>
+  </>;
 }

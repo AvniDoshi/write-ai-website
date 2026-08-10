@@ -1,29 +1,15 @@
 import type { Metadata } from "next";
-import { SiteLink as Link } from "../components/SiteLink";
 import { PageIntro } from "../components/SiteShell";
 
 export const metadata: Metadata = { title: "Stay in Touch" };
 
 export default function ContactPage() {
-  return (
-    <>
-      <PageIntro eyebrow="Stay in touch" title="Follow the work. Join the conversation." description="Subscribe for Digital Learning Lab updates or contact the WRITE AI team about research, partnerships, events, and future opportunities." />
-      <section className="section stay-in-touch-grid">
-        <div className="contact-options">
-          <article><p className="resource-kicker">Newsletter</p><h2>Get research updates.</h2><p>Follow the Digital Learning Lab’s Substack for new research, insights, events, and project news.</p><Link className="button" href="https://digitallearninglab.substack.com/">Subscribe on Substack →</Link></article>
-          <article><p className="resource-kicker">Mailing list</p><h2>Join the DLL community.</h2><p>Join the Digital Learning Lab Google Group for announcements and opportunities.</p><Link className="button button-ghost" href="https://groups.google.com/g/digital-learning-lab">Join the mailing list →</Link></article>
-          <article><p className="resource-kicker">Direct contact</p><h2>Mark Warschauer</h2><p>WRITE AI inquiries are currently directed to Mark at UC Irvine while a dedicated center inbox is being established.</p><a className="text-link" href="mailto:markw@uci.edu">markw@uci.edu →</a></article>
-        </div>
-        <form className="contact-form" action="mailto:markw@uci.edu" method="post" encType="text/plain">
-          <div><p className="eyebrow">Contact form</p><h2>Send an inquiry.</h2><p>This form opens your email application and addresses the message to Mark.</p></div>
-          <label>Name<input name="Name" type="text" autoComplete="name" required /></label>
-          <label>Email<input name="Email" type="email" autoComplete="email" required /></label>
-          <label>Organization<input name="Organization" type="text" autoComplete="organization" /></label>
-          <label>Topic<select name="Topic" defaultValue="General inquiry"><option>General inquiry</option><option>Research collaboration</option><option>Training or event</option><option>Resource question</option><option>Grant proposal request</option></select></label>
-          <label>Message<textarea name="Message" rows={7} required /></label>
-          <button className="button" type="submit">Open email to send →</button>
-        </form>
-      </section>
-    </>
-  );
+  return <>
+    <PageIntro eyebrow="Stay in touch" title="Stay in Touch" description="Connect with the WRITE AI Center, ask a question, or keep up with new research, resources, events, and opportunities." />
+    <section className="section contact-columns">
+      <form className="contact-form" action="mailto:markw@uci.edu" method="post" encType="text/plain"><div><p className="eyebrow">Contact WRITE AI</p><h2>Have a question or want to connect?</h2><p>Use the form below to reach the WRITE AI team.</p></div><label>Name<input name="Name" type="text" autoComplete="name" required /></label><label>Email Address<input name="Email" type="email" autoComplete="email" required /></label><label>Organization (optional)<input name="Organization" type="text" autoComplete="organization" /></label><label>Role or Title (optional)<input name="Role" type="text" autoComplete="organization-title" /></label><label>What are you contacting us about?<select name="Topic" defaultValue="General Question"><option>General Question</option><option>Research</option><option>PapyrusAI</option><option>Training or Events</option><option>Partnership or Collaboration</option><option>Media Inquiry</option><option>Other</option></select></label><label>Message<textarea name="Message" rows={7} required /></label><button className="button" type="submit">Send Message</button><small>We’ll route your message to the appropriate member of the WRITE AI team.</small></form>
+      <form className="newsletter-form" action="https://digitallearninglab.substack.com/subscribe" method="get" target="_blank"><div><p className="eyebrow">WRITE AI Newsletter</p><h2>Stay Informed</h2><p>Get WRITE AI updates in your inbox.</p><p>Subscribe to receive periodic updates from the Center, including new research findings, publications, resources, training opportunities, events, and other developments in generative AI and postsecondary writing.</p><p>The Center emphasizes sharing actionable information with educators, researchers, institutional leaders, policymakers, and the broader public.</p></div><label>Email Address<input name="email" type="email" autoComplete="email" required /></label><label>First Name (optional)<input name="first_name" type="text" autoComplete="given-name" /></label><label>Last Name (optional)<input name="last_name" type="text" autoComplete="family-name" /></label><label>Organization (optional)<input name="organization" type="text" autoComplete="organization" /></label><button className="button" type="submit">Subscribe to the Newsletter</button><small>You can unsubscribe at any time.</small></form>
+    </section>
+    <section className="section institutional-section"><div className="section-heading"><p className="eyebrow">Previous newsletters</p><h2>Read Past Issues</h2><p className="section-deck">Catch up on previous WRITE AI updates, research highlights, events, and resources.</p></div><div className="newsletter-empty"><h3>No issues published yet.</h3><p>Past newsletters will be added here as the Center begins publishing updates.</p></div></section>
+  </>;
 }

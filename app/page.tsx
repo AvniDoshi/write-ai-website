@@ -1,164 +1,29 @@
 import { SiteLink as Link } from "./components/SiteLink";
-import { partners, researchAreas, resources } from "./data/site";
+import { partners } from "./data/site";
+
+const work = [
+  ["Research AI and Writing", "We study how generative AI is being used in postsecondary writing instruction and how it affects teaching, learning, and student outcomes."],
+  ["Develop and Study PapyrusAI", "We are further developing and evaluating PapyrusAI, a guided generative AI environment designed to support writing development and AI literacy."],
+  ["Build Research Capacity", "We provide training and opportunities for researchers, educators, and institutional leaders to strengthen their ability to evaluate generative AI in education."],
+  ["Share Evidence and Resources", "We translate research into practical guidance, training, and resources that can support responsible AI use across postsecondary education."],
+];
 
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">Improving writing education in the age of AI</p>
-          <h1>Better writing starts with better questions.</h1>
-          <p className="hero-deck">
-            WRITE AI researches how generative AI can strengthen writing
-            instruction, build AI literacy, and support—not replace—student
-            thinking.
-          </p>
-          <div className="button-row">
-            <Link className="button" href="/research">
-              Explore our research <span aria-hidden="true">→</span>
-            </Link>
-            <Link className="button button-ghost" href="/about">
-              About WRITE AI
-            </Link>
-          </div>
-        </div>
-        <div className="hero-visual" aria-label="Writing, educators, AI, and research connected to improve learning">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="concept concept-writing"><span>Writing</span></div>
-          <div className="concept concept-ai"><span>AI</span></div>
-          <div className="concept concept-educators"><span>Educators</span></div>
-          <div className="concept concept-research"><span>Research</span></div>
-          <div className="concept concept-learning"><span>Better<br />learning</span></div>
-        </div>
+      <section className="hero institutional-hero">
+        <div className="hero-copy"><p className="eyebrow">Improving writing education in the age of AI</p><h1>Improving Writing Education in the Age of AI</h1><p className="hero-deck">WRITE AI is a national research center studying how generative AI can be used effectively, responsibly, and equitably to improve writing instruction in postsecondary education.</p><p className="hero-deck secondary-deck">Through research, technology development, training, and national collaboration, the Center is building evidence to help students, educators, researchers, and institutions navigate writing in the age of AI.</p><div className="button-row"><Link className="button" href="/research">Explore Our Research →</Link></div></div>
+        <div className="hero-visual" aria-label="Writing, educators, AI, and research connected to improve learning"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="concept concept-writing"><span>Writing</span></div><div className="concept concept-ai"><span>AI</span></div><div className="concept concept-educators"><span>Educators</span></div><div className="concept concept-research"><span>Research</span></div><div className="concept concept-learning"><span>Better<br />learning</span></div></div>
       </section>
-
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">The proposed program at a glance</p>
-          <h2>Evidence built with community colleges, not just for them.</h2>
-          <p className="section-deck">WRITE AI is designed as a five-year research and capacity-building program. These figures describe the work proposed in the project narrative.</p>
-        </div>
-        <div className="four-grid">
-          {[
-            ["100", "AI tools targeted for the public landscape database"],
-            ["6", "community colleges participating in early co-design"],
-            ["24", "instructors contributing to iterative development"],
-            ["60", "first-year composition instructors in the planned trial"],
-          ].map(([number, copy]) => <article className="function-card" key={number}><span className="card-index">{number}</span><p>{copy}</p></article>)}
-        </div>
-      </section>
-
-      <section className="statement band">
-        <p>The future of writing isn’t human <em>or</em> AI.</p>
-        <h2>It’s learning how to use both.</h2>
-      </section>
-
-      <section className="section what-we-do">
-        <div className="section-heading split-heading">
-          <div>
-            <p className="eyebrow">What we do</p>
-            <h2>Research designed to move the field forward.</h2>
-          </div>
-          <p>
-            We connect rigorous study, participatory design, researcher training,
-            and national outreach to turn emerging evidence into practical guidance.
-          </p>
-        </div>
-        <div className="four-grid">
-          {[
-            ["Research AI + writing", "Study how generative AI is being used in postsecondary writing education."],
-            ["Develop + test PapyrusAI", "Build an AI writing environment designed around learning and student agency."],
-            ["Train people", "Equip researchers and educators with methods, professional learning, and practical tools."],
-            ["Share evidence", "Translate research for colleges, instructors, researchers, and policymakers."],
-          ].map(([title, copy], index) => (
-            <article className="function-card" key={title}>
-              <span className="card-index">0{index + 1}</span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section research-section">
-        <div className="section-heading">
-          <p className="eyebrow">Our research</p>
-          <h2>Three connected areas. One urgent question.</h2>
-          <p className="section-deck">
-            How can AI support stronger writers and more effective teaching while
-            protecting the human work of learning?
-          </p>
-        </div>
-        <div className="research-list">
-          {researchAreas.map((area) => (
-            <Link className="research-row" href={area.href} key={area.number}>
-              <span>{area.number}</span>
-              <h3>{area.title}</h3>
-              <p>{area.description}</p>
-              <b aria-hidden="true">↗</b>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="papyrus-feature">
-        <div className="papyrus-copy">
-          <p className="eyebrow light">Meet PapyrusAI</p>
-          <h2>AI that helps students write—not writes for them.</h2>
-          <p>
-            A guided environment where instructor-designed prompts help students
-            plan, reflect, revise, and build the judgment to use AI responsibly.
-          </p>
-          <Link className="button button-light" href="/papyrus-ai">
-            See how it works <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-        <div className="guided-flow" aria-label="PapyrusAI learning flow">
-          {[
-            ["01", "Guided questions"],
-            ["02", "Student thinking"],
-            ["03", "AI feedback"],
-            ["04", "Student revision"],
-          ].map(([number, label]) => (
-            <div className="flow-step" key={number}>
-              <span>{number}</span><strong>{label}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section resource-preview">
-        <div className="section-heading split-heading">
-          <div>
-          <p className="eyebrow">Planned research + resources</p>
-            <h2>Evidence you can use.</h2>
-          </div>
-          <Link className="text-link" href="/resources">
-            View all resources <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-        <div className="three-grid">
-          {resources.map((resource) => (
-            <article className="resource-card" key={resource.title}>
-              <div className="resource-meta"><span>{resource.type}</span><span>{resource.audience}</span></div>
-              <h3>{resource.title}</h3>
-              <p>{resource.summary}</p>
-              <span className="read-more">Coming soon <span aria-hidden="true">↗</span></span>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="partners-section">
-        <div>
-          <p className="eyebrow">A national collaboration</p>
-          <h2>Research is stronger when expertise travels.</h2>
-        </div>
-        <div className="partner-grid">
-          {partners.map((partner) => <span key={partner}>{partner}</span>)}
-        </div>
-      </section>
+      <section className="section"><div className="section-heading"><p className="eyebrow">What we do</p><h2>Research, development, capacity, and evidence.</h2></div><div className="four-grid">{work.map(([title, copy], index)=><article className="function-card" key={title}><span className="card-index">0{index+1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+      <section className="section two-column-story institutional-section"><div><p className="eyebrow">Why this work matters</p><h2>Writing remains essential.</h2></div><div className="prose"><p>Writing remains essential for success in college, work, and everyday life. At the same time, instructors often face limits on the amount of individualized feedback and support they can provide.</p><p>Generative AI creates new opportunities for personalized writing support, but it also raises important questions about student learning, overreliance, privacy, bias, academic integrity, and responsible use.</p><p>WRITE AI studies how institutions can take advantage of AI’s potential without losing sight of the learning that writing is meant to develop.</p></div></section>
+      <section className="papyrus-feature"><div className="papyrus-copy"><p className="eyebrow light">Featured work</p><h2>PapyrusAI</h2><p>PapyrusAI is a web-based generative AI platform designed to support writing and AI literacy through structured, research-based interactions.</p><p>The platform helps students engage with AI throughout the writing process while giving instructors greater control over how AI is used in their courses.</p><Link className="button button-light" href="/papyrus-ai">Learn About PapyrusAI →</Link></div><div className="guided-flow">{[["01","Plan"],["02","Draft"],["03","Revise"],["04","Reflect"]].map(([number,label])=><div className="flow-step" key={number}><span>{number}</span><strong>{label}</strong></div>)}</div></section>
+      <section className="partners-section"><div><p className="eyebrow">A national collaboration</p><h2>Complementary expertise, shared purpose.</h2><p>WRITE AI brings together expertise in writing research, postsecondary education, generative AI, educational technology, research and evaluation, and institutional leadership.</p></div><div className="partner-grid">{partners.map((partner)=><span key={partner}>{partner}</span>)}</div></section>
+      <section className="section"><div className="section-heading split-heading"><div><p className="eyebrow">Latest from WRITE AI</p><h2>Research, events, and resources.</h2></div><Link className="text-link" href="/news">View All News →</Link></div><div className="three-grid">
+        <article className="resource-card"><div className="resource-meta"><span>Research update</span></div><h3>National AI writing landscape study</h3><p>WRITE AI is planning a public study of the tools, uses, requirements, and evidence shaping AI-supported writing instruction.</p><Link className="text-link" href="/research">Read research overview →</Link></article>
+        <article className="resource-card"><div className="resource-meta"><span>Upcoming event</span></div><h3>AI in Higher Education</h3><p>A UCI professional-learning course beginning September 29, 2026, for higher-education instructors and instructional-support professionals.</p><Link className="text-link" href="/training-events">View event →</Link></article>
+        <article className="resource-card"><div className="resource-meta"><span>Resource</span></div><h3>PapyrusAI Instructor Guide</h3><p>Practical guidance from the Digital Learning Lab for instructors using PapyrusAI.</p><Link className="text-link" href="https://docs.google.com/document/d/1o3He0CdgV7hJOX65gc3Gpf3_Fr3GYvSm4Q-i-Y5cNHQ/edit?usp=sharing">Open guide →</Link></article>
+      </div></section>
     </>
   );
 }
