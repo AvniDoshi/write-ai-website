@@ -266,12 +266,11 @@ h3 { line-height: 1.18; }
 .organization-description { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
 .organization-people { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; margin-top: 2rem; border: 1px solid var(--line); background: var(--line); }
 .organization-people .person-card { display: grid; grid-template-columns: 90px 1fr; gap: 1.25rem; align-items: center; padding: 1.25rem; background: var(--paper); transition: background .2s ease, transform .2s ease; }
-.organization-people .person-card:hover { position: relative; z-index: 1; background: var(--sky-light); transform: translateY(-2px); }
+.organization-people .person-card:hover, .organization-people .person-card:focus-visible { position: relative; z-index: 1; background: var(--sky-light); transform: translateY(-2px); }
 .person-monogram.compact { width: 90px; aspect-ratio: 1; margin: 0; font-size: 1.8rem; }
 .organization-people h3 { margin: 0 0 .3rem; font-family: Georgia, serif; font-size: 1.25rem; }
 .organization-people p { margin: 0; color: var(--muted); font-size: .85rem; }
 .organization-people small { display: block; margin-top: .25rem; color: var(--muted); font-size: .72rem; line-height: 1.4; }
-.organization-people .person-card span { display: inline-block; margin-top: .75rem; color: var(--orange); font-size: .65rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .dll-team-link { background: var(--sky-light); }
 .profile-hero { padding: 7rem max(9vw, 1.5rem) 5rem; background: var(--sky); }
 .profile-back { display: inline-block; margin-bottom: 3rem; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
