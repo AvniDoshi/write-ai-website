@@ -66,12 +66,12 @@ export const sampleTools = [
 ];
 
 export const partners = [
-  "UC Irvine",
-  "MDRC",
-  "American Council on Education",
-  "California Community Colleges",
-  "Virginia Community College System",
-  "Houston Community College",
+  { name: "UC Irvine", href: "https://uci.edu/" },
+  { name: "MDRC", href: "https://www.mdrc.org/" },
+  { name: "American Council on Education", href: "https://www.acenet.edu/" },
+  { name: "California Community Colleges", href: "https://www.cccco.edu/" },
+  { name: "Virginia Community College System", href: "https://www.vccs.edu/" },
+  { name: "Houston Community College", href: "https://www.hccs.edu/" },
 ];
 
 export const resources = [
