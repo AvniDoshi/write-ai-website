@@ -15,7 +15,6 @@ export const peopleSections: PeopleSection[] = [
   ] },
   { id: "research-development", name: "Research and Development Team", people: [
     { slug: "michael-hebert", name: "Michael Hebert", role: "Writing Evaluation", institution: "WRITE AI" },
-    { slug: "cristina-lopes", name: "Cristina Lopes", role: "Generative AI and Software Development", institution: "University of California, Irvine" },
     { slug: "beth-harnick-shapiro", name: "Beth Harnick-Shapiro", role: "Disciplinary Writing", institution: "University of California, Irvine" },
     { slug: "penelope-collins", name: "Penelope Collins", role: "Developmental Writing", institution: "University of California, Irvine" },
     { slug: "kristi-werry", name: "Kristi Werry", role: "Software Engineering", institution: "University of California, Irvine" },
