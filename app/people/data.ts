@@ -1,22 +1,32 @@
-export type Person = { slug: string; name: string; role: string; institution: string };
+export type PersonLink = { label: string; href: string };
+export type Person = {
+  slug: string;
+  name: string;
+  role: string;
+  institution: string;
+  title?: string;
+  image?: string;
+  description?: string;
+  links?: PersonLink[];
+};
 export type PeopleSection = { id: string; name: string; people: Person[] };
 
 export const peopleSections: PeopleSection[] = [
   { id: "leadership", name: "Leadership", people: [
     { slug: "mark-warschauer", name: "Mark Warschauer", role: "Principal Investigator", institution: "University of California, Irvine" },
-    { slug: "di-xu", name: "Di Xu", role: "Co-Principal Investigator", institution: "University of California, Irvine" },
+    { slug: "di-xu", name: "Di Xu", role: "Co-Principal Investigator", institution: "University of California, Irvine", title: "Professor", image: "/people/di-xu.webp", description: "Di Xu is a professor at the University of California, Irvine and a Co-Principal Investigator for the WRITE AI Center." },
     { slug: "tamara-tate", name: "Tamara Tate", role: "Co-Principal Investigator", institution: "University of California, Irvine" },
     { slug: "alexander-mayer", name: "Alexander Mayer", role: "Co-Principal Investigator", institution: "MDRC" },
-    { slug: "richard-hendra", name: "Richard Hendra", role: "Co-Principal Investigator", institution: "MDRC" },
+    { slug: "richard-hendra", name: "Richard Hendra", role: "Co-Principal Investigator", institution: "MDRC", title: "Senior Fellow and Director of Data Strategy and Innovation", image: "/people/richard-hendra.webp", description: "Richard Hendra is a Senior Fellow and Director of Data Strategy and Innovation at MDRC and a Co-Principal Investigator for the WRITE AI Center.", links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/richard-hendra-67b60a4/" }] },
     { slug: "jory-hadsell", name: "Jory Hadsell", role: "Co-Principal Investigator", institution: "Foothill-De Anza Community College District" },
     { slug: "justin-schultz", name: "Justin Schultz", role: "Co-Principal Investigator", institution: "Foothill-De Anza Community College District" },
     { slug: "hironao-okahana", name: "Hironao Okahana", role: "Co-Principal Investigator", institution: "American Council on Education" },
-    { slug: "sheri-prupis", name: "Sheri Prupis", role: "Co-Principal Investigator", institution: "Virginia Community College System" },
+    { slug: "sheri-prupis", name: "Sheri L. Prupis, PhD", role: "Co-Principal Investigator", institution: "Virginia Community College System", title: "Director, Teaching & Learning with Technology / Project Director, Digital Accessibility Compliance Initiative", image: "/people/sheri-prupis.webp", description: "Sheri L. Prupis, PhD, directs Teaching & Learning with Technology and the Digital Accessibility Compliance Initiative for the Virginia Community College System. She is a Co-Principal Investigator for the WRITE AI Center.", links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/sheriprupis/" }] },
   ] },
   { id: "research-development", name: "Research and Development Team", people: [
     { slug: "michael-hebert", name: "Michael Hebert", role: "Writing Evaluation", institution: "WRITE AI" },
-    { slug: "beth-harnick-shapiro", name: "Beth Harnick-Shapiro", role: "Disciplinary Writing", institution: "University of California, Irvine" },
-    { slug: "penelope-collins", name: "Penelope Collins", role: "Developmental Writing", institution: "University of California, Irvine" },
+    { slug: "beth-harnick-shapiro", name: "Beth Harnick-Shapiro", role: "Disciplinary Writing", institution: "UC Irvine and Cal State Fullerton", title: "Lecturer", image: "/people/beth-harnick-shapiro.webp", description: "Beth Harnick-Shapiro is a lecturer at UC Irvine and Cal State Fullerton who contributes expertise in disciplinary writing to the WRITE AI Center.", links: [{ label: "Personal website", href: "https://sites.google.com/uci.edu/bhs" }, { label: "LinkedIn", href: "https://www.linkedin.com/in/beth-harnick-shapiro/" }] },
+    { slug: "penelope-collins", name: "Penelope Collins", role: "Developmental Writing", institution: "University of California, Irvine", title: "Professor", description: "Penelope Collins is a professor at the University of California, Irvine who contributes expertise in developmental writing to the WRITE AI Center.", links: [{ label: "Personal website", href: "https://sites.google.com/uci.edu/penelopecollins/home" }] },
     { slug: "kristi-werry", name: "Kristi Werry", role: "Software Engineering", institution: "University of California, Irvine" },
   ] },
   { id: "writing-advisors", name: "Writing Advisors", people: [

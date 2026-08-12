@@ -20,18 +20,18 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
     return <section className="section profile-page"><h1>Profile not found</h1><Link className="text-link" href="/people">Back to People →</Link></section>;
   }
 
-  const initials = person.name.split(" ").map((part) => part[0]).join("");
+  const initials = person.name.split(" ").filter((part) => !part.includes(",") && part !== "PhD").map((part) => part[0]).join("");
 
   return (
     <>
       <section className="profile-hero">
         <Link className="profile-back" href="/people">← All people</Link>
-        <div className="profile-identity"><div className="person-monogram profile-monogram" aria-hidden="true">{initials}</div><div><p className="eyebrow">{person.section.name}</p><h1>{person.name}</h1><p>{person.role} · {person.institution}</p></div></div>
+        <div className="profile-identity">{person.image ? <img className="profile-photo" src={person.image} alt={`Portrait of ${person.name}`} /> : <div className="person-monogram profile-monogram" aria-hidden="true">{initials}</div>}<div><p className="eyebrow">{person.section.name}</p><h1>{person.name}</h1><p>{person.title ?? person.role} · {person.institution}</p></div></div>
       </section>
       <section className="section profile-content">
-        <article><p className="resource-kicker">About</p><h2>Biography</h2><p>Add a longer biography, background, education, and current position here.</p></article>
-        <article><p className="resource-kicker">WRITE AI</p><h2>Role in the center</h2><p>{person.role}. Add more detail about responsibilities, activities, and contributions here.</p></article>
-        <article><p className="resource-kicker">More information</p><h2>Links and publications</h2><p>Add a personal website, institutional profile, selected publications, and contact links here.</p></article>
+        <article><p className="resource-kicker">About</p><h2>Biography</h2><p>{person.description ?? "Additional biography information will be added as it becomes available."}</p></article>
+        <article><p className="resource-kicker">WRITE AI</p><h2>Role in the center</h2><p>{person.role}. Additional information about responsibilities and Center activities will be added as the work develops.</p></article>
+        <article><p className="resource-kicker">More information</p><h2>Links</h2>{person.links?.length ? <ul className="profile-links">{person.links.map((link) => <li key={link.href}><Link href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></Link></li>)}</ul> : <p>Additional links will be added as they become available.</p>}</article>
       </section>
     </>
   );
