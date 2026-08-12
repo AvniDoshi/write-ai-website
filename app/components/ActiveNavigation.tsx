@@ -29,8 +29,7 @@ export function ActiveNavigation() {
   return (
     <div className="nav-wrap">
       <Link className={`wordmark${homeIsCurrent ? " wordmark-current" : ""}`} href="/" aria-label="WRITE AI home" aria-current={homeIsCurrent ? "page" : undefined}>
-        <span className="wordmark-main">WRITE AI</span>
-        <span className="wordmark-sub">CENTER</span>
+        <img className="header-logo" src="/write-ai-logo-header.png" alt="WRITE AI Center" />
       </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {nav.map(([label, href]) => {
