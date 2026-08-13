@@ -66,7 +66,7 @@ export const sampleTools = [
 ];
 
 export const partners = [
-  { name: "UC Irvine", href: "https://uci.edu/" },
+  { name: "UC Irvine", href: "/organizations/uc-irvine-digital-learning-lab" },
   { name: "MDRC", href: "https://www.mdrc.org/" },
   { name: "American Council on Education", href: "https://www.acenet.edu/" },
   { name: "California Community Colleges", href: "https://www.cccco.edu/" },
