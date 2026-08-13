@@ -67,11 +67,11 @@ export const sampleTools = [
 
 export const partners = [
   { name: "UC Irvine", href: "/organizations/uc-irvine-digital-learning-lab" },
-  { name: "MDRC", href: "https://www.mdrc.org/" },
-  { name: "American Council on Education", href: "https://www.acenet.edu/" },
-  { name: "California Community Colleges", href: "https://www.cccco.edu/" },
-  { name: "Virginia Community College System", href: "https://www.vccs.edu/" },
-  { name: "Houston Community College", href: "https://www.hccs.edu/" },
+  { name: "MDRC", href: "/organizations/mdrc" },
+  { name: "American Council on Education", href: "/organizations/american-council-on-education" },
+  { name: "California Community Colleges", href: "/organizations/california-community-colleges-foothill-de-anza" },
+  { name: "Virginia Community College System", href: "/organizations/virginia-community-college-system" },
+  { name: "Houston Community College", href: "/organizations/houston-community-college" },
 ];
 
 export const resources = [

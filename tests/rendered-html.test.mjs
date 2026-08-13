@@ -42,3 +42,18 @@ test("server-renders primary public routes", async () => {
     assert.match(await response.text(), expected, path);
   }
 });
+
+test("server-renders every partner organization profile", async () => {
+  for (const [path, expected] of [
+    ["/organizations/uc-irvine-digital-learning-lab", /Digital Learning Lab/],
+    ["/organizations/mdrc", /rigorous research design/i],
+    ["/organizations/american-council-on-education", /national higher education leadership/i],
+    ["/organizations/california-community-colleges-foothill-de-anza", /Foothill-De Anza/],
+    ["/organizations/virginia-community-college-system", /digital accessibility/i],
+    ["/organizations/houston-community-college", /diverse urban community college/i],
+  ]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    assert.match(await response.text(), expected, path);
+  }
+});
