@@ -2,19 +2,14 @@
 
 import { useState } from "react";
 import { SiteLink as Link } from "../components/SiteLink";
+import { newsStories, type NewsCategory } from "./data";
 
-const categories = ["All", "Research", "Center News", "Publications", "Resources", "Events"] as const;
-
-const stories = [
-  { category: "Research", title: "Enhancing academic writing and digital literacy with an AI coach", copy: "The Digital Learning Lab lists this California Learning Lab project as active from January 2025 through December 2027.", date: "Current", href: "https://www.digitallearninglab.org/grants.html" },
-  { category: "Center News", title: "GenAI team presents writing research across three institutions", copy: "Tamara Tate, Beth Harnick-Shapiro, and Stephanie Tran presented work on incorporating generative AI into writing at the DET/CHE annual conference.", date: "December 2025", href: "https://www.digitallearninglab.org/" },
-  { category: "Resources", title: "Generative AI in Education", copy: "A UCI initiative investigating responsible and effective AI integration across K-12 and higher education.", date: "Current", href: "https://www.genaied.org/" },
-  { category: "Events", title: "AI in Higher Education", copy: "A three-unit UCI course focused on AI literacy, critical evaluation, ethics, equity, and human-centered scaffolding.", date: "September 2026", href: "https://www.digitallearninglab.org/ai-in-higher-education.html" },
-] as const;
+const categories: Array<"All" | NewsCategory> = ["All", "Research", "Center News", "Publications", "Resources", "Events"];
 
 export function NewsFeed() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
-  const visibleStories = activeCategory === "All" ? stories : stories.filter((story) => story.category === activeCategory);
+  const storiesByDate = [...newsStories].sort((a, b) => b.sortDate.localeCompare(a.sortDate));
+  const visibleStories = activeCategory === "All" ? storiesByDate : storiesByDate.filter((story) => story.category === activeCategory);
 
   return (
     <>
@@ -34,12 +29,12 @@ export function NewsFeed() {
       {visibleStories.length ? (
         <div className="three-grid news-grid">
           {visibleStories.map((story) => (
-            <article className="resource-card" key={story.title}>
+            <Link className="resource-card news-card" href={`/news/${story.slug}`} key={story.title}>
               <div className="resource-meta"><span>{story.category}</span><span>{story.date}</span></div>
               <h3>{story.title}</h3>
-              <p>{story.copy}</p>
-              <Link className="text-link" href={story.href}>Read more &rarr;</Link>
-            </article>
+              <p>{story.summary}</p>
+              <span className="text-link">Read full story &rarr;</span>
+            </Link>
           ))}
         </div>
       ) : (
