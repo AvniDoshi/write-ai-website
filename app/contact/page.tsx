@@ -12,7 +12,7 @@ export default function ContactPage() {
         description="Connect with the WRITE AI Center, ask a question, or keep up with new research, resources, events, and opportunities."
       />
       <section className="section contact-columns">
-        <form className="contact-form" action="mailto:markw@uci.edu" method="post" encType="text/plain">
+        <form className="contact-form" action="mailto:writeaicenter@gmail.com" method="post" encType="text/plain">
           <div className="form-heading">
             <p className="eyebrow">Contact WRITE AI</p>
             <h2>Have a question or want to connect?</h2>
@@ -30,7 +30,7 @@ export default function ContactPage() {
             </label>
             <label className="field-wide">Message<textarea name="Message" rows={9} required /></label>
           </div>
-          <div className="form-actions"><button className="button" type="submit">Send Message</button><small>We’ll route your message to the appropriate member of the WRITE AI team.</small></div>
+          <div className="form-actions"><button className="button" type="submit">Send Message</button></div>
         </form>
 
         <form className="newsletter-form" action="https://digitallearninglab.substack.com/subscribe" method="get" target="_blank">
