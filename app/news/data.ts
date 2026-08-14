@@ -72,6 +72,60 @@ export const newsStories: NewsStory[] = [
     },
   },
   {
+    slug: "futures-summit-2026-presentation",
+    category: "Events",
+    title: "WRITE AI Leaders to Present at Futures Summit 2026",
+    date: "September 10, 2026",
+    sortDate: "2026-09-10",
+    summary: "WRITE AI leaders and California Community College instructors will share practical approaches to strengthening writing and critical thinking with generative AI.",
+    paragraphs: [
+      [
+        { text: "WRITE AI Center leaders Mark Warschauer and Tamara Tate will join California Community College instructors Stephanie Tran and Francesca Caparas to present Generative AI and the Future of Writing Instruction on September 10, 2026, at " },
+        { text: "Futures Summit 2026", href: "https://californiacommunitycolleges.cventevents.com/event/FuturesSummit2026/home" },
+        { text: ", an annual conference hosted by the California Community Colleges Digital Center for Innovation, Transformation and Equity." },
+      ],
+      [
+        { text: "Drawing on classroom experience and field research, the presenters will offer guidance on using generative AI to strengthen student thinking rather than replace it. They will demonstrate how the PapyrusAI personalized writing coach supports drafting, revision, and critical thinking, and share an AI literacy assignment focused on algorithmic identities." },
+      ],
+      [
+        { text: "Futures Summit brings together more than 1,000 leaders, educators, and innovators to explore how AI and other emerging technologies are reshaping learning, work, and opportunity. The 2026 Summit takes place September 9-10 at the Santa Clara Convention Center in California." },
+      ],
+    ],
+    cta: {
+      label: "Futures Summit 2026",
+      href: "https://californiacommunitycolleges.cventevents.com/event/FuturesSummit2026/home",
+    },
+  },
+  {
+    slug: "new-cambridge-elements-writing-academic-integrity",
+    category: "Publications",
+    title: "New Cambridge Elements on Writing and Academic Integrity",
+    date: "2026",
+    sortDate: "2026-08-14",
+    summary: "Two new Cambridge Elements examine academic integrity in the age of AI and generative AI for second-language writing, feedback, assessment, and instruction.",
+    paragraphs: [
+      [
+        { text: "The " },
+        { text: "Cambridge Elements in Generative AI in Education", href: "https://www.cambridge.org/core/publications/elements/generative-ai-in-education" },
+        { text: " series, edited by WRITE AI Center leaders Mark Warschauer and Tamara Tate, has published two new online monographs of interest to writing researchers and educators." },
+      ],
+      [
+        { text: "In " },
+        { text: "Academic Integrity in the Age of AI", href: "https://www.cambridge.org/core/elements/abs/academic-integrity-in-the-age-of-ai/8652D952D1C480A46996183626BE3DD7" },
+        { text: ", authors Tricia Bertram Gallant, Mary Davis, and Zeenath Reza Khan offer a multilayered, balanced approach to academic integrity. The monograph addresses guidelines, policies, and procedures; the redesign of assessment; and the cultivation of ethical decision-making in the age of AI." },
+      ],
+      [
+        { text: "In " },
+        { text: "Generative AI for Second Language Writing Feedback, Assessment, and Instruction", href: "https://www.cambridge.org/core/elements/generative-ai-for-second-language-writing-feedback-assessment-and-instruction/895B73EE7CB0C563A65494B923F4E826" },
+        { text: ", authors Mimi Li, Jining Han, and Gouda Taha synthesize current research and practical applications showing how generative AI can support students throughout the writing process, provide high-quality feedback, and facilitate second-language writing assessment." },
+      ],
+    ],
+    cta: {
+      label: "Explore the Cambridge Elements Series",
+      href: "https://www.cambridge.org/core/publications/elements/generative-ai-in-education",
+    },
+  },
+  {
     slug: "new-ai-writing-digital-literacy-fellows-cohort-launched",
     category: "Center News",
     title: "New AI Writing & Digital Literacy Fellows Cohort Launched",
