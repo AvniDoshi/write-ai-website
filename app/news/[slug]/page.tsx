@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SiteLink as Link } from "../../components/SiteLink";
 import { getNewsStory, newsStories } from "../data";
+import { ClickToPlayVideo } from "./ClickToPlayVideo";
 
 export function generateStaticParams() {
   return newsStories.map((story) => ({ slug: story.slug }));
@@ -44,10 +45,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           ))}
           {story.video ? (
             <figure className="news-video">
-              <video controls preload="metadata" playsInline aria-label={story.video.title}>
-                <source src={story.video.src} type={story.video.type} />
-                Your browser does not support embedded video.
-              </video>
+              <ClickToPlayVideo src={story.video.src} title={story.video.title} type={story.video.type} />
               <figcaption>{story.video.title}</figcaption>
             </figure>
           ) : null}
