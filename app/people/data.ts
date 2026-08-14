@@ -50,7 +50,7 @@ export const partnerOrganizations = [
   { name: "American Council on Education", href: "/organizations/american-council-on-education" },
   { name: "California Community Colleges / Foothill-De Anza", href: "/organizations/california-community-colleges-foothill-de-anza" },
   { name: "Virginia Community College System", href: "/organizations/virginia-community-college-system" },
-  { name: "Houston Community College", href: "/organizations/houston-community-college" },
+  { name: "Houston City College", href: "/organizations/houston-community-college" },
 ];
 
 export function getPerson(slug: string) {

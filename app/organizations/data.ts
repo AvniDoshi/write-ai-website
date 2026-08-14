@@ -50,10 +50,10 @@ export const organizations: Organization[] = [
   },
   {
     slug: "houston-community-college",
-    name: "Houston Community College",
-    shortName: "Houston Community College",
-    about: "Houston Community College is a public community college serving learners across the Houston region through academic, workforce, online, and continuing-education programs. Its flexible programs and campuses connect students with transfer pathways, credentials, and career preparation.",
-    role: "Houston Community College brings the perspective of a large, diverse urban community college to WRITE AI. Its participation will help the Center understand implementation across varied programs and student populations and develop guidance that is practical for instructors and institutions.",
+    name: "Houston City College",
+    shortName: "Houston City College",
+    about: "Houston City College is a public community college serving learners across the Houston region through academic, workforce, online, and continuing-education programs. Its flexible programs and campuses connect students with transfer pathways, credentials, and career preparation.",
+    role: "Houston City College brings the perspective of a large, diverse urban community college to WRITE AI. Its participation will help the Center understand implementation across varied programs and student populations and develop guidance that is practical for instructors and institutions.",
     website: "https://www.hccs.edu/",
   },
 ];
