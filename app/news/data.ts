@@ -17,6 +17,11 @@ export type NewsStory = {
     label: string;
     href: string;
   };
+  video?: {
+    src: string;
+    title: string;
+    type: string;
+  };
 };
 
 export const newsStories: NewsStory[] = [
@@ -97,6 +102,34 @@ export const newsStories: NewsStory[] = [
     },
   },
   {
+    slug: "new-scoring-interview-modules-papyrusai",
+    category: "Center News",
+    title: "New Scoring and Interview Modules in PapyrusAI",
+    date: "September 2026",
+    sortDate: "2026-09-01",
+    summary: "Two new PapyrusAI modules will support rubric-aligned writing review, feedback, voice-based writing support, and oral assessment.",
+    paragraphs: [
+      [
+        { text: "PapyrusAI, the personalized writing platform developed by the WRITE AI Center, is adding two new modules to support classroom instruction." },
+      ],
+      [
+        { text: "A new multi-agent scoring module, called Review, assigns scores and provides targeted feedback on student writing based on instructor-provided rubrics. The feature draws on cutting-edge research led by WRITE AI graduate student researcher Ali Keramati, including his " },
+        { text: "recent paper", href: "https://aclanthology.org/2026.acl-srw.121/" },
+        { text: " presented at the 2026 Annual Meeting of the Association for Computational Linguistics." },
+      ],
+      [
+        { text: "A new interview module enables teachers and researchers to conduct voice-based conversations with students. It can be used to scaffold students' writing processes or support oral assessments." },
+      ],
+      [
+        { text: "Both modules are scheduled for release in September 2026." },
+      ],
+    ],
+    cta: {
+      label: "Read the Research Paper",
+      href: "https://aclanthology.org/2026.acl-srw.121/",
+    },
+  },
+  {
     slug: "new-cambridge-elements-writing-academic-integrity",
     category: "Publications",
     title: "New Cambridge Elements on Writing and Academic Integrity",
@@ -144,6 +177,36 @@ export const newsStories: NewsStory[] = [
         { text: "Fellows participate in a Faculty Learning Community (FLC) to explore best practices for integrating generative AI into the classroom in ways that support student learning. Through the program, Fellows gain access to training, mentorship, and PapyrusAI — a generative AI-based tool designed to strengthen students' writing skills and critical AI literacy while safeguarding student privacy and preserving teacher agency." },
       ],
     ],
+  },
+  {
+    slug: "human-first-ai-framework",
+    category: "Resources",
+    title: "Human-First AI Framework",
+    date: "June 30, 2026",
+    sortDate: "2026-06-30",
+    summary: "A new framework from the UC Irvine Digital Learning Lab offers five practical habits for staying in charge of thinking, judgment, and learning while using generative AI.",
+    paragraphs: [
+      [
+        { text: "The UC Irvine Digital Learning Lab has released the Human-First AI framework, which helps students, educators, and the public use generative AI effectively and ethically while maintaining responsibility for their own thinking, judgment, and learning." },
+      ],
+      [
+        { text: "The framework centers on five practical habits: think first, ask and iterate, take charge, check your facts, and reflect and learn. Together, these habits provide a functional foundation for using artificial intelligence to strengthen human cognition and academic growth rather than displace them." },
+      ],
+      [
+        { text: "Watch the video below for an introduction to the framework, or read the full " },
+        { text: "Human-First AI article", href: "https://digitallearninglab.substack.com/p/human-first-ai" },
+        { text: " from the UC Irvine Digital Learning Lab." },
+      ],
+    ],
+    video: {
+      src: "/media/human-first-ai.mp4",
+      title: "Human-First AI framework video",
+      type: "video/mp4",
+    },
+    cta: {
+      label: "Read Human-First AI",
+      href: "https://digitallearninglab.substack.com/p/human-first-ai",
+    },
   },
 ];
 

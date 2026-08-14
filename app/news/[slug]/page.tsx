@@ -42,6 +42,15 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
                 : part.text)}
             </p>
           ))}
+          {story.video ? (
+            <figure className="news-video">
+              <video controls preload="none" aria-label={story.video.title}>
+                <source src={story.video.src} type={story.video.type} />
+                Your browser does not support embedded video.
+              </video>
+              <figcaption>{story.video.title}</figcaption>
+            </figure>
+          ) : null}
           {story.cta ? <Link className="button" href={story.cta.href}>{story.cta.label} →</Link> : null}
         </div>
       </article>
