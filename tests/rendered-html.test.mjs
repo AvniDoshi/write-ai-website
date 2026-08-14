@@ -31,7 +31,7 @@ test("server-renders primary public routes", async () => {
     ["/research", /What generative AI tools are colleges using/],
     ["/papyrus-ai", /What Is PapyrusAI/i],
     ["/ai-tools", /Explore AI tools/],
-    ["/resources", /Practical resources for writing and AI/],
+    ["/resources", /Generative AI tools for writing instruction/],
     ["/training-events", /WRITE AI Fellows Program/],
     ["/people", /Mark Warschauer/],
     ["/people/mark-warschauer", /Role in the center/],

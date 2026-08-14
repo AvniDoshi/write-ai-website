@@ -4,6 +4,51 @@ import { PageIntro } from "../components/SiteShell";
 
 export const metadata: Metadata = { title: "Resources" };
 
+const centerResources = [
+  {
+    id: "tools-database",
+    label: "Public database",
+    title: "Generative AI tools for writing instruction",
+    description: "WRITE AI will create a publicly available, searchable database with a web-friendly interface. Practitioners, policymakers, and researchers will be able to compare the generative AI tools colleges use for writing instruction and examine how those tools are implemented.",
+    details: ["Search and compare tools, features, costs, infrastructure requirements, training needs, safety, fairness, and available evidence.", "Explore findings about which colleges are—and are not—using generative AI for writing instruction, which tools they select, and how they use them.", "Review qualitative findings that highlight important use cases and examples from institutions."],
+  },
+  {
+    id: "research-data",
+    label: "Open research",
+    title: "Findings and downloadable data",
+    description: "Analyses from the national landscape study will be published on this website alongside findings from qualitative interviews. The full dataset collected through survey questionnaires will also be made downloadable so other researchers can conduct additional analyses.",
+    details: ["Website briefs will summarize national patterns and practical implications.", "Interview findings will document institutional examples and notable use cases.", "Downloadable survey data will support independent research and further study."],
+  },
+  {
+    id: "implementation-guide",
+    label: "Implementation support",
+    title: "Implementation Support Guide",
+    description: "The database, survey, interview, co-design, and evaluation findings will inform an Implementation Support Guide for postsecondary institutions. The guide will identify the expertise, conditions, and resources needed to implement generative AI tools successfully and responsibly.",
+    details: ["Practical guidance for implementing PapyrusAI and related tools.", "Readiness assessments for institutions, programs, and instructional teams.", "Lessons about training, infrastructure, student support, and responsible use."],
+  },
+  {
+    id: "evaluation-framework",
+    label: "Evaluation framework",
+    title: "Evaluation Framework for AI in Postsecondary Instruction",
+    description: "Building on earlier work by project investigators in evaluating digital learning, WRITE AI will develop a framework for studying generative AI in postsecondary instruction by spring of Year 4. It will help institutions and researchers evaluate implementation, teaching practices, learner experiences, and educational outcomes.",
+    details: ["Measures for implementation quality, readiness, and instructional alignment.", "Attention to effectiveness, student learning, equity, privacy, bias, and responsible use.", "A shared structure for rigorous evaluation across tools and institutional settings."],
+  },
+  {
+    id: "educator-certificate",
+    label: "Professional development",
+    title: "Certificate program for postsecondary educators",
+    description: "WRITE AI will develop a professional development certificate program in Year 1 and offer it nationally through @ONE in Years 2–5. The program will prepare educators to teach writing effectively and responsibly with generative AI.",
+    details: ["Understanding AI-assisted writing and selecting appropriate tools.", "Designing courses that incorporate AI and establishing guidelines for student use.", "Supporting AI literacy, ethical use, and new approaches to writing assessment."],
+  },
+  {
+    id: "public-learning",
+    label: "Public learning",
+    title: "Briefs, webinars, and podcasts",
+    description: "WRITE AI will share actionable research findings with educators, researchers, institutional leaders, policymakers, and the broader public through annual briefs, educational webinars, podcasts, and recordings made available for broader access.",
+    details: ["Annual briefs translating Center findings into clear, usable guidance.", "Educational webinars on emerging issues in AI-supported writing and learning.", "Podcasts and recorded sessions that extend access beyond live events."],
+  },
+];
+
 const resourceGroups = [
   {
     id: "guides",
@@ -65,7 +110,16 @@ const resourceGroups = [
 export default function ResourcesPage() {
   return (
     <>
-      <PageIntro eyebrow="DLL resource library" title="Practical resources for writing and AI." description="Direct links to the Digital Learning Lab’s published guides, professional learning, prompts, activities, and introductory AI-literacy curriculum. These resources are maintained by their original publishers." />
+      <PageIntro eyebrow="Resources" title="Resources" description="WRITE AI is developing research data, practical guides, evaluation tools, and professional learning to help postsecondary institutions use generative AI effectively, responsibly, and equitably." />
+      <section className="section resource-overview">
+        <div className="section-heading split-heading"><div><h2>Building capacity through evidence and practical support.</h2></div><p>These planned resources will translate WRITE AI research into information and tools for educators, institutional leaders, policymakers, practitioners, and researchers.</p></div>
+        <div className="three-grid resource-summary-grid">{centerResources.map((resource, index)=><Link className="resource-card" href={`#${resource.id}`} key={resource.id}><div className="resource-meta"><span>{resource.label}</span></div><span className="card-index">0{index+1}</span><h3>{resource.title}</h3><p>{resource.description}</p></Link>)}</div>
+      </section>
+      <section className="section institutional-section resource-details">
+        {centerResources.map((resource, index)=><article className="two-column-story resource-detail" id={resource.id} key={resource.id}><div><p className="resource-kicker">0{index+1} · {resource.label}</p><h2>{resource.title}</h2></div><div className="prose"><p>{resource.description}</p><ul>{resource.details.map((detail)=><li key={detail}>{detail}</li>)}</ul></div></article>)}
+      </section>
+      <section className="section"><div className="section-heading"><h2>Explore published GenAI education resources.</h2><p className="section-deck">Browse additional guides, teaching materials, research, and professional-learning resources maintained by the UC Irvine Digital Learning Lab.</p></div><Link className="button button-ghost" href="https://www.genaied.org/resources.html" target="_blank" rel="noreferrer">Explore GenAI Education Resources →</Link></section>
+      <section className="page-intro resource-library-intro"><h2>Published guides and teaching materials</h2><p className="page-deck">Direct links to the UC Irvine Digital Learning Lab’s published guides, professional learning, prompts, activities, and introductory AI-literacy curriculum. These resources are maintained by their original publishers.</p></section>
       <section className="section resource-library expanded-library">
         <aside><p className="eyebrow">On this page</p>{resourceGroups.map((group)=><Link href={`#${group.id}`} key={group.id}>{group.title}</Link>)}</aside>
         <div className="resource-groups">

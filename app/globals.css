@@ -257,6 +257,14 @@ h3 { line-height: 1.18; }
 .resource-group { scroll-margin-top: 7rem; padding: 0 0 5rem; margin-bottom: 5rem; border-bottom: 1px solid var(--line); }
 .resource-group h2 { margin: .35rem 0 1rem; font-size: clamp(2.5rem, 4vw, 4rem); }
 .resource-group > p:not(.resource-kicker) { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
+.resource-summary-grid { margin-top: 2.5rem; }
+.resource-summary-grid .resource-card { display: block; color: inherit; }
+.resource-summary-grid .resource-card:hover, .resource-summary-grid .resource-card:focus-visible { background: var(--sky-light); }
+.resource-details { padding-top: 5rem; padding-bottom: 1rem; }
+.resource-detail { scroll-margin-top: 7rem; padding: 0 0 4.5rem; margin-bottom: 4.5rem; border-bottom: 1px solid var(--line); }
+.resource-detail:last-child { margin-bottom: 0; }
+.resource-detail .prose ul { margin: 1.5rem 0 0; padding-left: 1.25rem; }
+.resource-detail .prose li { margin-bottom: .75rem; color: var(--muted); line-height: 1.65; }
 .resource-link-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; margin-top: 2rem; border: 1px solid var(--line); background: var(--line); }
 .resource-link-card { min-height: 105px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.35rem; background: var(--paper); font-family: Georgia, serif; font-size: 1.15rem; }
 .resource-link-card b { color: var(--orange); }

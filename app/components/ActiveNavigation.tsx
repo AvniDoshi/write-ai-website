@@ -6,6 +6,7 @@ import { SiteLink as Link } from "./SiteLink";
 const nav = [
   ["About", "/about"],
   ["Research", "/research"],
+  ["Resources", "/resources"],
   ["PapyrusAI", "/papyrus-ai"],
   ["Training & Events", "/training-events"],
   ["News", "/news"],
