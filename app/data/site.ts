@@ -69,7 +69,7 @@ export const partners = [
   { name: "UC Irvine", href: "/organizations/uc-irvine-digital-learning-lab" },
   { name: "MDRC", href: "/organizations/mdrc" },
   { name: "American Council on Education", href: "/organizations/american-council-on-education" },
-  { name: "California Community Colleges", href: "/organizations/california-community-colleges-foothill-de-anza" },
+  { name: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity", href: "/organizations/california-community-colleges-foothill-de-anza" },
   { name: "Virginia Community College System", href: "/organizations/virginia-community-college-system" },
   { name: "Houston City College", href: "/organizations/houston-community-college" },
 ];
