@@ -43,6 +43,35 @@ export const newsStories: NewsStory[] = [
     },
   },
   {
+    slug: "ai-in-higher-education",
+    category: "Events",
+    title: "AI in Higher Education",
+    date: "September 29–December 1, 2026",
+    sortDate: "2026-09-29",
+    summary: "A synchronous UCI course for postsecondary instructors and instructional-support professionals focused on thoughtful, effective, and responsible uses of generative AI.",
+    paragraphs: [
+      [
+        { text: "The UC Irvine School of Education's Digital Learning Lab is offering AI in Higher Education, a three-unit course for higher education instructors and professionals who support instruction, including instructional designers, faculty-development staff, and educational technology specialists." },
+      ],
+      [
+        { text: "The course runs from September 29 through December 1, 2026, and meets synchronously on Zoom on Tuesdays from 4:00–5:30 PM Pacific Time. No prior coding or computer science experience is required, and the course is designed for educators across levels of technical experience." },
+      ],
+      [
+        { text: "Participants will build a foundational understanding of generative AI, its instructional possibilities and limitations, and essential aspects of AI literacy. The course emphasizes using AI to scaffold learning rather than off-load it, while keeping educators and students at the center of the learning process." },
+      ],
+      [
+        { text: "Through hands-on activities and collaboration, participants will evaluate AI tools and their ethical implications, design AI-enhanced learning resources for their own teaching contexts, create an AI-infused lesson, and develop a digital portfolio with practical examples and a final project. The curriculum also emphasizes accessibility, ethics, equity, and responsible classroom use." },
+      ],
+      [
+        { text: "Tuition is $750. Three units of UCI continuing education credit are optionally available for a separate $150 transcript fee." },
+      ],
+    ],
+    cta: {
+      label: "Course Details and Registration",
+      href: "https://www.digitallearninglab.org/ai-in-higher-education.html",
+    },
+  },
+  {
     slug: "new-ai-writing-digital-literacy-fellows-cohort-launched",
     category: "Center News",
     title: "New AI Writing & Digital Literacy Fellows Cohort Launched",

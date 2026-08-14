@@ -17,7 +17,7 @@ export default function TrainingPage() {
       <div className="event-calendar">
         <article className="event-card">
           <div className="calendar-date"><span>SEP</span><strong>29</strong><small>2026</small></div>
-          <div className="event-card-copy"><p className="resource-kicker">Virtual · Registration open</p><h2>AI in Higher Education</h2><p>A synchronous UCI course for postsecondary instructors and instructional-support professionals, meeting Tuesdays from 4:00–5:30 p.m. Pacific through December 1.</p><Link className="text-link" href="https://www.digitallearninglab.org/ai-in-higher-education.html">Course details and registration →</Link></div>
+          <div className="event-card-copy"><p className="resource-kicker">Virtual · Registration open</p><h2>AI in Higher Education</h2><p>A synchronous UCI course for postsecondary instructors and instructional-support professionals, meeting Tuesdays from 4:00–5:30 p.m. Pacific through December 1.</p><Link className="text-link" href="/news/ai-in-higher-education">Course details and registration →</Link></div>
         </article>
         <article className="event-card">
           <div className="calendar-date"><span>NOV</span><strong>18</strong><small>2026</small></div>
