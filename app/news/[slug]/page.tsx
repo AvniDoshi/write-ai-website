@@ -44,7 +44,7 @@ export default async function NewsStoryPage({ params }: { params: Promise<{ slug
           ))}
           {story.video ? (
             <figure className="news-video">
-              <video controls preload="none" aria-label={story.video.title}>
+              <video controls preload="metadata" playsInline aria-label={story.video.title}>
                 <source src={story.video.src} type={story.video.type} />
                 Your browser does not support embedded video.
               </video>
