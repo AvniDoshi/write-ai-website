@@ -30,7 +30,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
       </section>
       <section className="section profile-content">
         <article className="profile-biography"><p className="resource-kicker">About</p><h2>Biography</h2><p>{person.description ?? "Additional biography information will be added as it becomes available."}</p></article>
-        <article><p className="resource-kicker">WRITE AI</p><h2>Role in the center</h2><p>{person.role}. Additional information about responsibilities and Center activities will be added as the work develops.</p></article>
+        <article><p className="resource-kicker">WRITE AI</p><h2>Role in the center</h2><p>{person.role}</p></article>
         <article><p className="resource-kicker">More information</p><h2>Links</h2>{person.links?.length ? <ul className="profile-links">{person.links.map((link) => <li key={link.href}><Link href={link.href} target="_blank" rel="noreferrer">{link.label}<span aria-hidden="true">↗</span></Link></li>)}</ul> : <p>Additional links will be added as they become available.</p>}</article>
       </section>
     </>
