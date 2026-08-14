@@ -251,7 +251,7 @@ h3 { line-height: 1.18; }
 .event-card-copy h2 { margin: .5rem 0 1rem; font-size: clamp(2rem, 3.5vw, 3.4rem); }
 .event-card-copy > p:not(.resource-kicker) { max-width: 780px; color: var(--muted); }
 .professional-learning > div:last-child { align-self: end; color: #c5d7dd; font-size: 1.1rem; }
-.expanded-library aside, .organization-nav { position: sticky; top: 7rem; }
+.expanded-library aside, .organization-nav { position: sticky; top: 7rem; align-self: start; height: fit-content; }
 .expanded-library aside a, .organization-nav a { padding: .65rem 0; border-bottom: 1px solid var(--line); font-weight: 700; }
 .resource-group { scroll-margin-top: 7rem; padding: 0 0 5rem; margin-bottom: 5rem; border-bottom: 1px solid var(--line); }
 .resource-group h2 { margin: .35rem 0 1rem; font-size: clamp(2.5rem, 4vw, 4rem); }
