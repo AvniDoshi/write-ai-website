@@ -268,6 +268,9 @@ h3 { line-height: 1.18; }
 .professional-learning > div:last-child { align-self: end; color: #c5d7dd; font-size: 1.1rem; }
 .expanded-library aside, .organization-nav { position: sticky; top: 7rem; align-self: start; height: fit-content; }
 .expanded-library aside a, .organization-nav a { padding: .65rem 0; border-bottom: 1px solid var(--line); font-weight: 700; }
+.organization-nav a { transition: color .18s ease; }
+.organization-nav a:hover, .organization-nav a:focus-visible { color: var(--orange); }
+.organization-nav a.section-link-active { color: var(--blue); }
 .resource-group { scroll-margin-top: 7rem; padding: 0 0 5rem; margin-bottom: 5rem; border-bottom: 1px solid var(--line); }
 .resource-group h2 { margin: .35rem 0 1rem; font-size: clamp(2.5rem, 4vw, 4rem); }
 .resource-group > p:not(.resource-kicker) { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
