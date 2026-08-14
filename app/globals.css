@@ -291,7 +291,8 @@ h3 { line-height: 1.18; }
 .profile-photo { width: 230px; height: 280px; object-fit: cover; object-position: center 20%; border: 8px solid rgba(255,255,255,.65); background: var(--paper); }
 .profile-identity h1 { margin: 0 0 1.25rem; font-size: clamp(3rem, 5.2vw, 5.35rem); }
 .profile-identity > div:last-child > p:last-child { color: var(--muted); font-size: 1.2rem; }
-.organization-profile-hero { min-height: 450px; display: grid; align-content: center; }
+.organization-profile-hero { min-height: 0; padding-top: 3.5rem; padding-bottom: 4rem; display: grid; align-content: start; }
+.organization-profile-hero .profile-back { margin-bottom: 2rem; }
 .organization-profile-identity { max-width: 1100px; }
 .organization-profile-identity h1 { max-width: 1050px; margin: 0; font-size: clamp(3rem, 5.2vw, 5.35rem); line-height: 1.1; }
 .organization-profile-content { grid-template-columns: 1.5fr 1fr; }
