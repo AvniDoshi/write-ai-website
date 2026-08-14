@@ -332,7 +332,7 @@ h3 { line-height: 1.18; }
 .contact-email-card h2 { max-width: 820px; margin: .6rem 0 1.25rem; color: white; font-size: clamp(2.35rem, 4vw, 4.5rem); line-height: 1.04; }
 .contact-email-card .eyebrow { color: var(--gold); }
 .contact-email-copy > p:last-child { max-width: 780px; margin: 0; color: #c5d7dd; font-size: clamp(1rem, 1.3vw, 1.2rem); }
-.contact-email-action { display: grid; gap: 1rem; justify-items: start; align-content: end; }
+.contact-email-action { display: grid; gap: 1rem; justify-items: start; align-self: center; align-content: center; }
 .contact-email-action p { max-width: 360px; margin: 0; color: #c5d7dd; font-size: .86rem; }
 .contact-email-button { border-color: var(--cream); background: var(--cream); color: var(--ink-dark); }
 .contact-email-button:hover, .contact-email-button:focus-visible { border-color: var(--gold); background: var(--gold); color: var(--ink-dark); }
