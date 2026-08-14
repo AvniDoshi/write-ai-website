@@ -22,7 +22,6 @@ export default function ContactPage() {
             <a className="button contact-email-button" href="mailto:writeaicenter@gmail.com?subject=WRITE%20AI%20Inquiry">
               Email WRITE AI <span aria-hidden="true">→</span>
             </a>
-            <p>Your email application will open with a new message.</p>
           </div>
         </article>
 
