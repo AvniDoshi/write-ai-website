@@ -101,9 +101,8 @@ h3 { line-height: 1.18; }
 .partners-section > div:first-child > p:last-child { max-width: 660px; margin-bottom: 0; line-height: 1.7; }
 .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid rgba(24,59,74,.25); border-left: 1px solid rgba(24,59,74,.25); }
 .partner-grid span, .partner-grid .partner-link { min-height: 105px; display: grid; place-items: center; padding: 1rem; border-right: 1px solid rgba(24,59,74,.25); border-bottom: 1px solid rgba(24,59,74,.25); font-family: Georgia, serif; font-size: 1.05rem; text-align: center; }
-.partner-grid .partner-link { position: relative; transition: background .2s ease, color .2s ease; }
-.partner-grid .partner-link b { position: absolute; top: .85rem; right: 1rem; color: var(--orange); font-family: Arial, sans-serif; font-size: .9rem; }
-.partner-grid .partner-link:hover, .partner-grid .partner-link:focus-visible { background: var(--sky); color: var(--blue); }
+.partner-grid .partner-link { position: relative; cursor: pointer; transition: background .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.partner-grid .partner-link:hover, .partner-grid .partner-link:focus-visible { z-index: 1; background: var(--blue); color: #fff; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(24,59,74,.18); outline: none; }
 .page-intro { padding: 3.75rem max(9vw, 1.5rem); background: var(--sky); }
 .page-intro h1 { max-width: 900px; margin-bottom: 1.15rem; font-size: clamp(2.6rem, 4.5vw, 4.5rem); }
 .compact-intro { padding: 3.75rem max(9vw, 1.5rem); background: var(--sky); }
