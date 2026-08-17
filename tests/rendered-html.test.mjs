@@ -84,12 +84,12 @@ test("server-renders the newly completed people profiles", async () => {
   }
 });
 
-test("renders Kristi Werry without a profile photo", async () => {
+test("renders Kristi Werry with her profile photo", async () => {
   const response = await render("/people/kristi-werry");
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /supporting more than 7,000 users/);
-  assert.doesNotMatch(html, /kristi-werry\.webp/);
+  assert.match(html, /kristi-werry\.webp/);
 });
 
 test("renders Sabrina Look with the centered portrait treatment", async () => {
