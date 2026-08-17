@@ -37,6 +37,7 @@ test("server-renders primary public routes", async () => {
     ["/people", /Mark Warschauer/],
     ["/people/mark-warschauer", /Role in the center/],
     ["/contact", /Stay Informed/],
+    ["/newsletter/fall-2026-issue-01", /Fall 2026 · Issue 01/],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -50,6 +51,22 @@ test("embeds the PapyrusAI introduction video", async () => {
   const html = await response.text();
   assert.match(html, /youtube-nocookie\.com\/embed\/NSCXLxhthqE/);
   assert.match(html, /Introduction to PapyrusAI/);
+});
+
+test("renders the complete Fall 2026 newsletter with its requested visuals", async () => {
+  const response = await render("/newsletter/fall-2026-issue-01");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  for (const expected of [
+    /mark-warschauer\.webp/,
+    /ai-writing-digital-literacy-fellows-poster\.png/,
+    /papyrusai-interface\.png/,
+    /dll-professional-learning-webinar\.png/,
+    /MADRAG/,
+    /November 18, 2026/,
+  ]) {
+    assert.match(html, expected);
+  }
 });
 
 test("shows Avni Doshi's full title in the people directory", async () => {

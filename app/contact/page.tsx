@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../components/SiteShell";
+import { SiteLink as Link } from "../components/SiteLink";
 
 export const metadata: Metadata = { title: "Stay in Touch" };
 
@@ -42,9 +43,18 @@ export default function ContactPage() {
           <div className="form-actions"><button className="button" type="submit">Subscribe to the Newsletter</button><small>You can unsubscribe at any time.</small></div>
         </form>
       </section>
-      <section className="section institutional-section">
+      <section className="section institutional-section" id="past-issues">
         <div className="section-heading"><p className="eyebrow">Previous newsletters</p><h2>Read Past Issues</h2><p className="section-deck">Catch up on previous WRITE AI updates, research highlights, events, and resources.</p></div>
-        <div className="newsletter-empty"><h3>No issues published yet.</h3><p>Past newsletters will be added here as the Center begins publishing updates.</p></div>
+        <div className="newsletter-issues">
+          <Link className="newsletter-issue-card" href="/newsletter/fall-2026-issue-01">
+            <div className="newsletter-issue-meta">
+              <span>Fall 2026 · Issue 01</span>
+              <time dateTime="2026-09">September 2026</time>
+            </div>
+            <p>In this issue: A message from Director Mark Warschauer, recent publications and preprints, PapyrusAI updates and training, and the upcoming AI in Higher Education course.</p>
+            <span className="text-link">Read Issue →</span>
+          </Link>
+        </div>
       </section>
     </>
   );
