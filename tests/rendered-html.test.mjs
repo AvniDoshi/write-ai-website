@@ -57,3 +57,18 @@ test("server-renders every partner organization profile", async () => {
     assert.match(await response.text(), expected, path);
   }
 });
+
+test("server-renders the newly completed people profiles", async () => {
+  for (const [path, expected] of [
+    ["/people/renzhe-yu", /AEQUITAS Lab/],
+    ["/people/ryan-baker", /Adelaide University/],
+    ["/people/charles-macarthur", /Supporting Strategic Writers/],
+    ["/people/michael-hebert", /Writing Project at UC Irvine/],
+    ["/people/jory-hadsell", /Strategic Technology Initiatives/],
+    ["/people/justin-schultz", /Common Cloud Data Platform/],
+  ]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    assert.match(await response.text(), expected, path);
+  }
+});
