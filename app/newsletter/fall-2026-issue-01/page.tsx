@@ -261,7 +261,7 @@ export default function Fall2026NewsletterPage() {
           </figure>
           <div>
             <p className="eyebrow">Upcoming Learning Opportunity</p>
-            <h2>AI in Higher Education</h2>
+            <h2>AI in Higher Education Course</h2>
             <p>
               The UC Irvine Digital Learning Lab will offer its AI in Higher
               Education course this fall. The synchronous online course provides an

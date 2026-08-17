@@ -50,7 +50,7 @@ export const newsStories: NewsStory[] = [
   {
     slug: "ai-in-higher-education",
     category: "Events",
-    title: "AI in Higher Education",
+    title: "AI in Higher Education Course",
     date: "September 29–December 1, 2026",
     sortDate: "2026-09-29",
     summary: "A synchronous UCI course for postsecondary instructors and instructional-support professionals focused on thoughtful, effective, and responsible uses of generative AI.",
