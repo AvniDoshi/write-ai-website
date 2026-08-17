@@ -371,6 +371,23 @@ h3 { line-height: 1.18; }
 .footer-links a:hover, .footer-links a:focus-visible { color: var(--gold); }
 .footer-bottom { padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); color: #9eb4bc; font-size: .7rem; }
 
+.faq-section { background: var(--sky-light); scroll-margin-top: 6.5rem; }
+.faq-groups { max-width: 1100px; }
+.faq-group { display: grid; grid-template-columns: minmax(190px,.38fr) minmax(0,1fr); gap: clamp(2rem,6vw,6rem); padding: 3rem 0; border-top: 1px solid var(--line); }
+.faq-group > h3 { margin: 0; color: var(--blue); font-family: Georgia, serif; font-size: clamp(1.6rem,2.5vw,2.35rem); font-weight: 500; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); background: var(--paper); }
+.faq-list summary { position: relative; padding: 1.45rem 4rem 1.45rem 1.5rem; cursor: pointer; list-style: none; font-family: Georgia, serif; font-size: clamp(1.15rem,1.8vw,1.4rem); font-weight: 500; line-height: 1.3; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: "+"; position: absolute; top: 1.25rem; right: 1.5rem; color: var(--orange); font-family: Arial, sans-serif; font-size: 1.65rem; font-weight: 400; line-height: 1; }
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list summary:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+.faq-answer { padding: 0 1.5rem 1.6rem; color: var(--muted); font-size: 1.02rem; line-height: 1.7; }
+.faq-answer p { margin: 0; }
+.faq-answer ul { margin: 1rem 0 0 1.25rem; padding: 0; list-style: disc; }
+.faq-answer li { margin: .65rem 0; padding-left: .35rem; }
+.faq-disclosure { max-width: 1100px; margin: 2rem 0 0; padding-top: 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; line-height: 1.6; }
+
 @media (max-width: 1100px) {
   .desktop-nav { display: none; }
   .mobile-menu { display: block; }
@@ -395,6 +412,10 @@ h3 { line-height: 1.18; }
   .concept-research { width: 85px; height: 85px; }
   .concept-learning { width: 140px; height: 140px; font-size: 1rem; }
   .section { padding-top: 5rem; padding-bottom: 5rem; }
+  .faq-group { grid-template-columns: 1fr; gap: 1.25rem; padding: 2.5rem 0; }
+  .faq-list summary { padding: 1.25rem 3.5rem 1.25rem 1.1rem; }
+  .faq-list summary::after { top: 1.1rem; right: 1.1rem; }
+  .faq-answer { padding: 0 1.1rem 1.4rem; }
   .split-heading, .two-column-story, .papyrus-feature, .partners-section, .teacher-loop, .professional-learning, .comparison, .event-feature, .funding-panel, .research-overview, .dll-team-link, .stay-in-touch-grid, .contact-columns, .contact-email-card { grid-template-columns: 1fr; }
   .four-grid, .three-grid, .people-grid, .channel-grid, .topic-grid { grid-template-columns: 1fr; }
   .research-row { grid-template-columns: 45px 1fr 25px; gap: 1rem; }
