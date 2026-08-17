@@ -43,6 +43,14 @@ test("server-renders primary public routes", async () => {
   }
 });
 
+test("embeds the PapyrusAI introduction video", async () => {
+  const response = await render("/papyrus-ai");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /youtube-nocookie\.com\/embed\/NSCXLxhthqE/);
+  assert.match(html, /Introduction to PapyrusAI/);
+});
+
 test("server-renders every partner organization profile", async () => {
   for (const [path, expected] of [
     ["/organizations/uc-irvine-digital-learning-lab", /Digital Learning Lab/],

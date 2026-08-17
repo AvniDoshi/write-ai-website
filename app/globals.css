@@ -90,6 +90,13 @@ h3 { line-height: 1.18; }
 .papyrus-copy { padding: 7rem max(6vw, 1.5rem); }
 .papyrus-copy h2 { font-size: clamp(3rem, 5.5vw, 5.5rem); }
 .papyrus-copy p:not(.eyebrow) { max-width: 620px; color: #c5d7dd; font-size: 1.1rem; }
+.papyrus-video-section { padding-top: 1rem; }
+.papyrus-video { max-width: 1100px; margin: 2.5rem auto 0; }
+.papyrus-video-frame { aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line); background: var(--ink-dark); box-shadow: 0 18px 45px rgba(24,59,74,.16); }
+.papyrus-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.papyrus-video figcaption { margin-top: .8rem; color: var(--muted); font-size: .8rem; font-weight: 700; }
+.papyrus-video figcaption a { color: var(--blue); }
+.papyrus-video figcaption a:hover, .papyrus-video figcaption a:focus-visible { color: var(--orange-dark); }
 .guided-flow { padding: 4rem max(5vw, 1.5rem); display: grid; align-content: center; background: var(--blue); }
 .flow-step { display: grid; grid-template-columns: 55px 1fr; gap: 1rem; padding: 1.6rem 0; border-bottom: 1px solid rgba(255,255,255,.25); }
 .flow-step span { color: var(--gold); font-size: .7rem; font-weight: 800; }
