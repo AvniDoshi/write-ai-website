@@ -51,6 +51,12 @@ test("embeds the PapyrusAI introduction video", async () => {
   assert.match(html, /Introduction to PapyrusAI/);
 });
 
+test("shows Avni Doshi's full title in the people directory", async () => {
+  const response = await render("/people");
+  assert.equal(response.status, 200);
+  assert.match(await response.text(), /Web Engineering and Digital Experience Specialist/);
+});
+
 test("server-renders every partner organization profile", async () => {
   for (const [path, expected] of [
     ["/organizations/uc-irvine-digital-learning-lab", /Digital Learning Lab/],
