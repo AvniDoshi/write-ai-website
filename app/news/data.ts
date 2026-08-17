@@ -110,7 +110,7 @@ export const newsStories: NewsStory[] = [
     summary: "Two new PapyrusAI modules will support rubric-aligned writing review, feedback, voice-based writing support, and oral assessment.",
     paragraphs: [
       [
-        { text: "PapyrusAI, the personalized writing platform developed by the WRITE AI Center, is adding two new modules to support classroom instruction." },
+        { text: "PapyrusAI, the personalized writing platform developed by the WRITE AI Center, now has two new modules to support classroom instruction." },
       ],
       [
         { text: "A new multi-agent scoring module, called Review, assigns scores and provides targeted feedback on student writing based on instructor-provided rubrics. The feature draws on cutting-edge research led by WRITE AI graduate student researcher Ali Keramati, including his " },
@@ -121,12 +121,34 @@ export const newsStories: NewsStory[] = [
         { text: "A new interview module enables teachers and researchers to conduct voice-based conversations with students. It can be used to scaffold students' writing processes or support oral assessments." },
       ],
       [
-        { text: "Both modules are scheduled for release in September 2026." },
+        { text: "Both modules are being released in September 2026." },
       ],
     ],
     cta: {
       label: "Read the Research Paper",
       href: "https://aclanthology.org/2026.acl-srw.121/",
+    },
+  },
+  {
+    slug: "new-papers-multi-agent-scoring",
+    category: "Publications",
+    title: "New Papers on Multi-Agent Scoring",
+    date: "August 2026",
+    sortDate: "2026-08-17",
+    summary: "WRITE AI graduate student researcher Ali Keramati presented three recent papers on the multi-agent debate system behind PapyrusAI's scoring mechanism.",
+    paragraphs: [
+      [
+        { text: "WRITE AI graduate student researcher Ali Keramati presented three recent papers at the international conference of the Association for Computational Linguistics." },
+      ],
+      [
+        { text: "All three " },
+        { text: "papers", href: "https://aclanthology.org/people/ali-keramati/" },
+        { text: " examine the research behind the multi-agent debate system that drives the scoring mechanism in PapyrusAI." },
+      ],
+    ],
+    cta: {
+      label: "View Ali Keramati's Papers",
+      href: "https://aclanthology.org/people/ali-keramati/",
     },
   },
   {

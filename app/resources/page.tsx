@@ -103,7 +103,7 @@ const resourceGroups = [
       ["K–12 Resources", "https://www.genaied.org/k-12-resources.html"],
       ["Generative AI in Education", "https://www.genaied.org/"],
       ["Digital Learning Lab Projects", "https://www.digitallearninglab.org/projects.html"],
-      ["Digital Learning Lab Newsletter", "https://digitallearninglab.substack.com/"],
+      ["Digital Learning Lab Substack", "https://digitallearninglab.substack.com/"],
     ],
   },
 ];
