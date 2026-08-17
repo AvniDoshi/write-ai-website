@@ -26,7 +26,7 @@ export default function ContactPage() {
           </div>
         </article>
 
-        <form className="newsletter-form" action="https://digitallearninglab.substack.com/subscribe" method="get" target="_blank">
+        <article className="newsletter-form">
           <div className="form-heading newsletter-copy">
             <p className="eyebrow">WRITE AI Newsletter</p>
             <h2>Stay Informed</h2>
@@ -34,14 +34,18 @@ export default function ContactPage() {
             <p>Subscribe to receive periodic updates from the Center, including new research findings, publications, resources, training opportunities, events, and other developments in generative AI and postsecondary writing.</p>
             <p>The Center emphasizes sharing actionable information with educators, researchers, institutional leaders, policymakers, and the broader public.</p>
           </div>
-          <div className="newsletter-fields">
-            <label>Email Address<input name="email" type="email" autoComplete="email" required /></label>
-            <label>Organization (optional)<input name="organization" type="text" autoComplete="organization" /></label>
-            <label>First Name (optional)<input name="first_name" type="text" autoComplete="given-name" /></label>
-            <label>Last Name (optional)<input name="last_name" type="text" autoComplete="family-name" /></label>
+          <div className="form-actions">
+            <a
+              className="button"
+              href="https://groups.google.com/g/write-ai-center-newsletter"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Join the Newsletter <span aria-hidden="true">→</span>
+            </a>
+            <small>Join with your preferred email address. You can unsubscribe at any time.</small>
           </div>
-          <div className="form-actions"><button className="button" type="submit">Subscribe to the Newsletter</button><small>You can unsubscribe at any time.</small></div>
-        </form>
+        </article>
       </section>
       <section className="section institutional-section" id="past-issues">
         <div className="section-heading"><p className="eyebrow">Previous newsletters</p><h2>Read Past Issues</h2><p className="section-deck">Catch up on previous WRITE AI updates, research highlights, events, and resources.</p></div>
