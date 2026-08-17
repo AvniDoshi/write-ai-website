@@ -76,7 +76,7 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/anna-mills", /AI and College Writing/],
     ["/people/danielle-mcnamara", /Learning Engineering Institute/],
     ["/people/sabrina-look", /Director of Communications and Special Projects/],
-    ["/people/avni-doshi", /Software Engineering &amp; Digital Experience Specialist/],
+    ["/people/avni-doshi", /Web Engineering and Digital Experience Specialist/],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
