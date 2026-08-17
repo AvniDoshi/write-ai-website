@@ -9,7 +9,24 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const person = getPerson(slug);
-  return { title: person?.name ?? "Person profile" };
+  if (!person) return { title: "Person profile" };
+
+  const description = person.description ?? `${person.name} serves as ${person.role} with the WRITE AI Center.`;
+  return {
+    title: person.name,
+    description,
+    openGraph: {
+      title: `${person.name} | WRITE AI Center`,
+      description,
+      images: person.image ? [{ url: person.image, alt: `Portrait of ${person.name}` }] : [],
+    },
+    twitter: {
+      card: person.image ? "summary_large_image" : "summary",
+      title: `${person.name} | WRITE AI Center`,
+      description,
+      images: person.image ? [person.image] : [],
+    },
+  };
 }
 
 export default async function PersonProfilePage({ params }: { params: Promise<{ slug: string }> }) {

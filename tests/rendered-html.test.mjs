@@ -66,6 +66,15 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/michael-hebert", /Writing Project at UC Irvine/],
     ["/people/jory-hadsell", /Strategic Technology Initiatives/],
     ["/people/justin-schultz", /Common Cloud Data Platform/],
+    ["/people/di-xu", /Online Learning Research Center/],
+    ["/people/alexander-mayer", /National Rural Higher Education Research Center/],
+    ["/people/richard-hendra", /State IMPACT Collaborative/],
+    ["/people/hironao-okahana", /Managing Researcher and Chief of Planning and Impact/],
+    ["/people/penelope-collins", /linguistically diverse backgrounds/],
+    ["/people/kristi-werry", /Software Engineer, Digital Learning Lab/],
+    ["/people/steve-graham", /Regents and Warner Professor/],
+    ["/people/anna-mills", /AI and College Writing/],
+    ["/people/danielle-mcnamara", /Learning Engineering Institute/],
   ]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
