@@ -50,7 +50,7 @@ h3 { line-height: 1.18; }
 .hero-copy { max-width: 720px; }
 .hero h1 { max-width: 780px; margin-bottom: 1.5rem; font-size: clamp(3rem, 5.4vw, 5.4rem); }
 .hero-deck { max-width: 650px; color: #3d5964; font-size: clamp(1.08rem, 1.8vw, 1.4rem); line-height: 1.6; }
-.secondary-deck { margin-top: -0.35rem; font-size: clamp(1rem, 1.45vw, 1.18rem); }
+.secondary-deck { margin-top: 1.35rem; font-size: clamp(1rem, 1.45vw, 1.18rem); }
 .button-row { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.2rem; }
 .hero-visual { position: relative; aspect-ratio: 1/1; min-height: 450px; }
 .orbit { position: absolute; inset: 12%; border: 1px solid rgba(55,110,165,.35); border-radius: 50%; }
