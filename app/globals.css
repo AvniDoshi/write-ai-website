@@ -386,7 +386,8 @@ h3 { line-height: 1.18; }
 .footer-brand span { color: #c5d7dd; font-size: .86rem; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .8rem 1.5rem; color: #e3eef3; font-size: .82rem; font-weight: 700; }
 .footer-links a:hover, .footer-links a:focus-visible { color: var(--gold); }
-.footer-bottom { padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); color: #9eb4bc; font-size: .7rem; }
+.footer-bottom { display: grid; gap: .8rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16); color: #9eb4bc; font-size: .7rem; }
+.footer-funding { max-width: 920px; margin: 0; color: #c5d7dd; font-size: .76rem; line-height: 1.55; }
 
 .faq-section { background: var(--sky-light); scroll-margin-top: 6.5rem; }
 .faq-groups { max-width: 1100px; }

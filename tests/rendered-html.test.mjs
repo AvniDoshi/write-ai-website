@@ -22,6 +22,7 @@ test("server-renders the WRITE AI homepage", async () => {
   assert.match(html, /Improving Writing Education in the Age of AI/);
   assert.match(html, /Explore our research/i);
   assert.match(html, /PapyrusAI/i);
+  assert.match(html, /Grant R305C260035 to the Regents of the University of California/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
