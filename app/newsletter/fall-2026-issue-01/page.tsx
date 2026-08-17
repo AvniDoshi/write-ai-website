@@ -197,13 +197,13 @@ export default function Fall2026NewsletterPage() {
         </div>
         <figure className="newsletter-papyrus-figure">
           <img
-            src="/newsletters/papyrusai-interface.png"
-            alt="PapyrusAI writing interface showing a student conversation with the AI writing coach"
+            src="/newsletters/papyrusai-student-guide-interface.jpg"
+            alt="PapyrusAI conversation workspace showing an AI writing coach prompt and response field"
             loading="lazy"
           />
           <figcaption>
-            The PapyrusAI interface keeps student writing and AI-supported feedback
-            in one conversational workspace.
+            The PapyrusAI conversation workspace keeps student writing and
+            AI-supported feedback together. Image from the official Student Guide.
           </figcaption>
         </figure>
         <div className="newsletter-training-card">
@@ -250,13 +250,13 @@ export default function Fall2026NewsletterPage() {
         <div className="newsletter-course-grid">
           <figure>
             <img
-              src="/newsletters/dll-professional-learning-webinar.png"
-              alt="Digital Learning Lab educators leading a professional-learning webinar"
+              src="/newsletters/dll-professional-learning-workshop.jpeg"
+              alt="Three educators collaborating during a professional-learning workshop"
               loading="lazy"
             />
             <figcaption>
-              Educators in a UC Irvine Digital Learning Lab professional-learning
-              conversation about writing and AI.
+              Professional-learning workshops support collaborative exploration of
+              AI for teaching and learning.
             </figcaption>
           </figure>
           <div>

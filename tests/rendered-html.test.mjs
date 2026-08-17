@@ -60,8 +60,8 @@ test("renders the complete Fall 2026 newsletter with its requested visuals", asy
   for (const expected of [
     /mark-warschauer\.webp/,
     /ai-writing-digital-literacy-fellows-poster\.png/,
-    /papyrusai-interface\.png/,
-    /dll-professional-learning-webinar\.png/,
+    /papyrusai-student-guide-interface\.jpg/,
+    /dll-professional-learning-workshop\.jpeg/,
     /MADRAG/,
     /November 18, 2026/,
   ]) {
