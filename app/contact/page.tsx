@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../components/SiteShell";
 import { SiteLink as Link } from "../components/SiteLink";
+import { NewsletterSignup } from "./NewsletterSignup";
 
 export const metadata: Metadata = { title: "Stay in Touch" };
 
@@ -35,15 +36,7 @@ export default function ContactPage() {
             <p>The Center emphasizes sharing actionable information with educators, researchers, institutional leaders, policymakers, and the broader public.</p>
           </div>
           <div className="form-actions">
-            <a
-              className="button"
-              href="https://groups.google.com/g/write-ai-center-newsletter"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Join the Newsletter <span aria-hidden="true">→</span>
-            </a>
-            <small>Join with your preferred email address. You can unsubscribe at any time.</small>
+            <NewsletterSignup />
           </div>
         </article>
       </section>
