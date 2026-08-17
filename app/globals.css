@@ -315,6 +315,7 @@ h3 { line-height: 1.18; }
 .profile-identity { width: min(100%, 1280px); margin-inline: auto; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 3rem; align-items: center; }
 .profile-monogram { width: 230px; aspect-ratio: 1; margin: 0; }
 .profile-photo { width: 230px; height: 280px; object-fit: cover; object-position: center 20%; border: 8px solid rgba(255,255,255,.65); background: var(--paper); }
+.profile-photo-left { object-position: left center; }
 .profile-identity h1 { margin: 0 0 1.25rem; font-size: clamp(3rem, 5.2vw, 5.35rem); }
 .profile-identity > div:last-child > p:last-child { color: var(--muted); font-size: 1.2rem; }
 .organization-profile-hero { min-height: 0; padding-top: 3.5rem; padding-bottom: 4rem; display: grid; align-content: start; }

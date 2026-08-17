@@ -43,7 +43,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
     <>
       <section className="profile-hero">
         <Link className="profile-back" href="/people">← All people</Link>
-        <div className="profile-identity">{person.image ? <img className="profile-photo" src={person.image} alt={`Portrait of ${person.name}`} /> : <div className="person-monogram profile-monogram" aria-hidden="true">{initials}</div>}<div><p className="eyebrow">{person.section.name}</p><h1>{person.name}</h1><p>{person.title ?? person.role} · {person.institution}</p></div></div>
+        <div className="profile-identity">{person.image ? <img className={`profile-photo${person.imagePosition ? ` profile-photo-${person.imagePosition}` : ""}`} src={person.image} alt={`Portrait of ${person.name}`} /> : <div className="person-monogram profile-monogram" aria-hidden="true">{initials}</div>}<div><p className="eyebrow">{person.section.name}</p><h1>{person.name}</h1><p>{person.title ?? person.role} · {person.institution}</p></div></div>
       </section>
       <section className="section profile-content">
         <article className="profile-biography"><p className="resource-kicker">About</p><h2>Biography</h2><p>{person.description ?? "Additional biography information will be added as it becomes available."}</p></article>
