@@ -71,7 +71,7 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/richard-hendra", /State IMPACT Collaborative/],
     ["/people/hironao-okahana", /Managing Researcher and Chief of Planning and Impact/],
     ["/people/penelope-collins", /linguistically diverse backgrounds/],
-    ["/people/kristi-werry", /Software Engineer, Digital Learning Lab/],
+    ["/people/kristi-werry", /supporting more than 7,000 users/],
     ["/people/steve-graham", /Regents and Warner Professor/],
     ["/people/anna-mills", /AI and College Writing/],
     ["/people/danielle-mcnamara", /Learning Engineering Institute/],
@@ -82,4 +82,12 @@ test("server-renders the newly completed people profiles", async () => {
     assert.equal(response.status, 200, path);
     assert.match(await response.text(), expected, path);
   }
+});
+
+test("renders Kristi Werry without a profile photo", async () => {
+  const response = await render("/people/kristi-werry");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /supporting more than 7,000 users/);
+  assert.doesNotMatch(html, /kristi-werry\.webp/);
 });
