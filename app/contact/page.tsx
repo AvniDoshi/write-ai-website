@@ -13,7 +13,7 @@ export default function ContactPage() {
         title="Stay in Touch"
         description="Connect with the WRITE AI Center, ask a question, or keep up with new research, resources, events, and opportunities."
       />
-      <section className="section contact-columns">
+      <section className="section contact-columns contact-newsletter-section">
         <article className="newsletter-form">
           <div className="form-heading newsletter-copy">
             <p className="eyebrow">WRITE AI Newsletter</p>
@@ -27,7 +27,7 @@ export default function ContactPage() {
           </div>
         </article>
       </section>
-      <section className="section institutional-section" id="past-issues">
+      <section className="section institutional-section contact-past-issues-section" id="past-issues">
         <div className="section-heading"><p className="eyebrow">Previous newsletters</p><h2>Read Past Issues</h2><p className="section-deck">Catch up on previous WRITE AI updates, research highlights, events, and resources.</p></div>
         <div className="newsletter-issues">
           <Link className="newsletter-issue-card" href="/newsletter/fall-2026-issue-01">
@@ -40,7 +40,7 @@ export default function ContactPage() {
           </Link>
         </div>
       </section>
-      <section className="section contact-columns">
+      <section className="section contact-columns contact-email-section">
         <article className="contact-email-card">
           <div className="contact-email-copy">
             <p className="eyebrow">Contact WRITE AI</p>

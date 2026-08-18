@@ -356,6 +356,9 @@ h3 { line-height: 1.18; }
 .contact-options h2 { margin: .5rem 0 1rem; font-size: 2rem; }
 .contact-options p { color: var(--muted); }
 .contact-columns { display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 1500px; margin: 0 auto; }
+.contact-newsletter-section { padding-top: 4rem; padding-bottom: 3rem; }
+.contact-past-issues-section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.contact-email-section { padding-top: 3rem; padding-bottom: 4rem; }
 .contact-email-card { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; padding: clamp(2.25rem, 5vw, 5rem); background: var(--ink-dark); color: white; }
 .contact-email-copy { max-width: 860px; }
 .contact-email-card h2 { max-width: 820px; margin: .6rem 0 1.25rem; color: white; font-size: clamp(2.35rem, 4vw, 4.5rem); line-height: 1.04; }
