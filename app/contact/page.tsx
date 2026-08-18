@@ -26,19 +26,6 @@ export default function ContactPage() {
             <NewsletterSignup />
           </div>
         </article>
-
-        <article className="contact-email-card">
-          <div className="contact-email-copy">
-            <p className="eyebrow">Contact WRITE AI</p>
-            <h2>Have a question or want to connect?</h2>
-            <p>Email the WRITE AI team about research, PapyrusAI, training and events, partnerships, media inquiries, or general questions.</p>
-          </div>
-          <div className="contact-email-action">
-            <a className="button contact-email-button" href="mailto:writeaicenter@gmail.com?subject=WRITE%20AI%20Inquiry">
-              Email WRITE AI <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
       </section>
       <section className="section institutional-section" id="past-issues">
         <div className="section-heading"><p className="eyebrow">Previous newsletters</p><h2>Read Past Issues</h2><p className="section-deck">Catch up on previous WRITE AI updates, research highlights, events, and resources.</p></div>
@@ -52,6 +39,20 @@ export default function ContactPage() {
             <span className="text-link">Read Issue →</span>
           </Link>
         </div>
+      </section>
+      <section className="section contact-columns">
+        <article className="contact-email-card">
+          <div className="contact-email-copy">
+            <p className="eyebrow">Contact WRITE AI</p>
+            <h2>Have a question or want to connect?</h2>
+            <p>Email the WRITE AI team about research, PapyrusAI, training and events, partnerships, media inquiries, or general questions.</p>
+          </div>
+          <div className="contact-email-action">
+            <a className="button contact-email-button" href="mailto:writeaicenter@gmail.com?subject=WRITE%20AI%20Inquiry">
+              Email WRITE AI <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
       </section>
     </>
   );
