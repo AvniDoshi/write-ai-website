@@ -7,7 +7,8 @@ import { newsStories } from "./data";
 export const metadata: Metadata = { title: "News & Insights" };
 
 export default function NewsPage() {
-  const featuredStory = [...newsStories].sort((a, b) => b.sortDate.localeCompare(a.sortDate))[0];
+  const featuredStory = newsStories.find((story) => story.slug === "ai-in-higher-education")
+    ?? [...newsStories].sort((a, b) => b.sortDate.localeCompare(a.sortDate))[0];
 
   return <>
     <PageIntro eyebrow="News + insights" title="News & Insights" description="Research findings, publications, resources, events, and updates from the WRITE AI Center." />
