@@ -77,7 +77,7 @@ export function NewsFeed() {
               </button>
             ))}
           </div>
-          <span className="news-page-status" aria-live="polite">
+          <span className="sr-only" aria-live="polite">
             Page {currentPage} of {totalPages}
           </span>
           <button
