@@ -14,19 +14,6 @@ export default function ContactPage() {
         description="Connect with the WRITE AI Center, ask a question, or keep up with new research, resources, events, and opportunities."
       />
       <section className="section contact-columns">
-        <article className="contact-email-card">
-          <div className="contact-email-copy">
-            <p className="eyebrow">Contact WRITE AI</p>
-            <h2>Have a question or want to connect?</h2>
-            <p>Email the WRITE AI team about research, PapyrusAI, training and events, partnerships, media inquiries, or general questions.</p>
-          </div>
-          <div className="contact-email-action">
-            <a className="button contact-email-button" href="mailto:writeaicenter@gmail.com?subject=WRITE%20AI%20Inquiry">
-              Email WRITE AI <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </article>
-
         <article className="newsletter-form">
           <div className="form-heading newsletter-copy">
             <p className="eyebrow">WRITE AI Newsletter</p>
@@ -37,6 +24,19 @@ export default function ContactPage() {
           </div>
           <div className="form-actions">
             <NewsletterSignup />
+          </div>
+        </article>
+
+        <article className="contact-email-card">
+          <div className="contact-email-copy">
+            <p className="eyebrow">Contact WRITE AI</p>
+            <h2>Have a question or want to connect?</h2>
+            <p>Email the WRITE AI team about research, PapyrusAI, training and events, partnerships, media inquiries, or general questions.</p>
+          </div>
+          <div className="contact-email-action">
+            <a className="button contact-email-button" href="mailto:writeaicenter@gmail.com?subject=WRITE%20AI%20Inquiry">
+              Email WRITE AI <span aria-hidden="true">→</span>
+            </a>
           </div>
         </article>
       </section>
