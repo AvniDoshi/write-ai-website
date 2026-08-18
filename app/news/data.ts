@@ -230,6 +230,28 @@ export const newsStories: NewsStory[] = [
       href: "https://digitallearninglab.substack.com/p/human-first-ai",
     },
   },
+  {
+    slug: "teaching-writing-in-the-age-of-ai",
+    category: "Resources",
+    title: "Teaching Writing in the Age of AI",
+    date: "March 9, 2026",
+    sortDate: "2026-03-09",
+    summary: "Tamara Tate of the WRITE AI Center and Stephanie Tran of Cypress College explore human-centered approaches to AI, composition, and academic writing in a new podcast episode.",
+    paragraphs: [
+      [
+        { text: "Tamara Tate of the WRITE AI Center and Stephanie Tran of Cypress College collaborated on a new podcast, " },
+        { text: "Teaching Writing in the Age of AI", href: "https://www.meltsintoair.org/unfixedpodcast/ep-24-teaching-writing-in-the-age-of-ai" },
+        { text: ". The podcast explores what AI means for composition, academic writing, and the scale of the challenge facing writing instructors as AI models become increasingly proficient at generating polished text." },
+      ],
+      [
+        { text: "What does “writing” mean across disciplines? And how can educators integrate AI into writing instruction without offloading the essential cognitive work that writing is meant to develop? Stephanie shares her work leading district-wide faculty development on equitable and human-centered AI practices. Tamara discusses her leadership at UC Irvine’s Digital Learning Lab and her experience developing AI-based writing tools designed to support—not replace—student skill building." },
+      ],
+    ],
+    cta: {
+      label: "Listen to the Podcast",
+      href: "https://www.meltsintoair.org/unfixedpodcast/ep-24-teaching-writing-in-the-age-of-ai",
+    },
+  },
 ];
 
 export function getNewsStory(slug: string) {
