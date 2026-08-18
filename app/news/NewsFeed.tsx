@@ -5,7 +5,7 @@ import { SiteLink as Link } from "../components/SiteLink";
 import { newsStories, type NewsCategory } from "./data";
 
 const categories: Array<"All" | NewsCategory> = ["All", "Research", "Center News", "Publications", "Resources", "Events"];
-const STORIES_PER_PAGE = 9;
+const STORIES_PER_PAGE = 6;
 
 export function NewsFeed() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
