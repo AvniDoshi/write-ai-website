@@ -10,7 +10,7 @@ const publications = [
       "Generative AI as a Mediational Agent: Rethinking Learning in Sociocultural Theory",
     description:
       "This preprint introduces a new conceptualization of generative AI that builds on and extends sociocultural theory. It considers the emerging role of AI in learning and offers implications for both future research and pedagogical practice.",
-    href: "https://osf.io/preprints/edarxiv/wcpj5_v1",
+    href: "https://osf.io/preprints/edarxiv/wcpj5_v2",
     label: "Read the preprint",
   },
   {
