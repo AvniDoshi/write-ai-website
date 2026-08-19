@@ -25,14 +25,6 @@ export const organizations: Organization[] = [
     website: "https://www.mdrc.org/",
   },
   {
-    slug: "american-council-on-education",
-    name: "American Council on Education",
-    shortName: "American Council on Education",
-    about: "The American Council on Education is a membership organization of more than 1,600 higher education institutions that drives transformative change. A recent area of emphasis for ACE has been to address the complex challenges and opportunities that emerging AI technology presents. ACE has launched the Global Data Consortium as a critical coordinating body for AI innovations in postsecondary teaching and learning.",
-    role: "ACE will assist in survey implementation for the study of AI platforms, lead the innovation labs, and assist with national dissemination of publications, findings, and resources from the Center.",
-    website: "https://www.acenet.edu/",
-  },
-  {
     slug: "california-community-colleges-foothill-de-anza",
     name: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity",
     shortName: "California Community Colleges’ Digital Center for Innovation, Transformation and Equity",

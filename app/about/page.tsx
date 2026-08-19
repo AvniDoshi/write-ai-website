@@ -27,7 +27,7 @@ const faqGroups = [
       },
       {
         question: "Who leads the Center, and who are the partners?",
-        answer: "The Center is directed by Mark Warschauer, Distinguished Professor of Education at UC Irvine, with Tamara Tate and Di Xu as co-principal investigators. UC Irvine leads a national partnership that includes MDRC, the American Council on Education, the California Community Colleges’ Digital Center for Innovation, Transformation and Equity — working with three participating California community colleges — the Virginia Community College System, and Houston City College. Together the partners bring expertise in writing research, educational technology, program evaluation, higher education policy, and community college instruction.",
+        answer: "The Center is directed by Mark Warschauer, Distinguished Professor of Education at UC Irvine, with Tamara Tate and Di Xu as co-principal investigators. UC Irvine leads a national partnership that includes MDRC, the California Community Colleges’ Digital Center for Innovation, Transformation and Equity — working with three participating California community colleges — the Virginia Community College System, and Houston City College. Together the partners bring expertise in writing research, educational technology, program evaluation, higher education policy, and community college instruction.",
       },
       {
         question: "What are the Center’s main areas of work?",
