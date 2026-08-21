@@ -30,6 +30,12 @@ npm test
 npm run lint
 ```
 
+After deployment, crawl every discoverable internal page and asset and fail on any non-successful response:
+
+```bash
+npm run verify:site -- https://writeai.center/
+```
+
 ## Data and privacy
 
 This repository is for public center content and approved research summaries. Do not commit credentials, private grant materials, identifiable student data, unpublished research data, or PapyrusAI conversation data.

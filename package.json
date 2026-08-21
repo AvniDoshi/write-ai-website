@@ -11,6 +11,7 @@
     "deploy": "npm run build && wrangler deploy",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "verify:site": "node scripts/verify-site.mjs",
     "lint": "eslint app db tests",
     "db:generate": "drizzle-kit generate"
   },

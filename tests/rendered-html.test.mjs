@@ -105,7 +105,7 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/steve-graham", /Regents and Warner Professor/],
     ["/people/anna-mills", /AI and College Writing/],
     ["/people/danielle-mcnamara", /Learning Engineering Institute/],
-    ["/people/sabrina-look", /Director of Communications and Special Projects/],
+    ["/people/sabrina-look", /Director of Communications/],
     ["/people/avni-doshi", /Web Engineering and Digital Experience Specialist/],
   ]) {
     const response = await render(path);
@@ -122,8 +122,8 @@ test("renders Kristi Werry with her profile photo", async () => {
   assert.match(html, /kristi-werry\.webp/);
 });
 
-test("renders Sabrina Look with the centered portrait treatment", async () => {
+test("renders Sabrina Look with her current portrait", async () => {
   const response = await render("/people/sabrina-look");
   assert.equal(response.status, 200);
-  assert.match(await response.text(), /profile-photo-left/);
+  assert.match(await response.text(), /sabrina-look\.jpg/);
 });
