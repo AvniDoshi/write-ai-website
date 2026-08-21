@@ -39,3 +39,8 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# local working and deployment artifacts
+/tmp/
+/dev-header.*.log
+/writeai-*.tar.gz
