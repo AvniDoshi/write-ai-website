@@ -16,6 +16,7 @@ const seedPaths = [
 
 const pending = seedPaths.map((path) => new URL(path, baseUrl).href);
 const checked = new Map();
+const discoveredFrom = new Map(pending.map((url) => [url, "seed route"]));
 const failures = [];
 
 function enqueue(rawUrl, parentUrl) {
@@ -30,7 +31,10 @@ function enqueue(rawUrl, parentUrl) {
 
   if (url.origin !== baseUrl.origin) return;
   url.hash = "";
-  if (!checked.has(url.href) && !pending.includes(url.href)) pending.push(url.href);
+  if (!checked.has(url.href) && !pending.includes(url.href)) {
+    discoveredFrom.set(url.href, parentUrl);
+    pending.push(url.href);
+  }
 }
 
 function discoverHtml(html, parentUrl) {
@@ -59,7 +63,7 @@ while (pending.length > 0) {
     checked.set(url, response.status);
 
     if (!response.ok) {
-      failures.push(`${response.status} ${url}`);
+      failures.push(`${response.status} ${url} (referenced by ${discoveredFrom.get(url)})`);
       continue;
     }
 
@@ -67,7 +71,7 @@ while (pending.length > 0) {
     else if (contentType.includes("text/css")) discoverCss(await response.text(), url);
   } catch (error) {
     checked.set(url, "ERROR");
-    failures.push(`ERROR ${url}: ${error.message}`);
+    failures.push(`ERROR ${url}: ${error.message} (referenced by ${discoveredFrom.get(url)})`);
   }
 }
 
