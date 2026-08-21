@@ -40,13 +40,28 @@ Runtime secrets belong in the hosting platform. Local environment files are igno
 
 The `main` branch of this GitHub repository is the complete and authoritative source for the WRITE AI website. All website code, content, images, database schemas, migrations, and hosting configuration must be committed and pushed here before publication.
 
-ChatGPT Sites is used only to host the production build. It is not a separate source repository or editing environment. Every production deployment must be built from the exact commit already present on GitHub.
+Production hosting uses Cloudflare Workers under an account owned by the WRITE AI Center. Cloudflare Builds connects directly to this GitHub repository and automatically deploys the `main` branch. ChatGPT Sites is not part of the website workflow.
 
-The required source includes `app`, `public`, `db`, `drizzle`, `worker`, `.openai/hosting.json`, and the root build configuration. Generated directories such as `dist`, `.next`, and `.vinext`, along with deployment archives, logs, dependencies, and temporary working files, are intentionally excluded because they are recreated from the committed source.
+The required source includes `app`, `public`, `db`, `drizzle`, `worker`, `wrangler.jsonc`, and the root build configuration. Generated directories such as `dist`, `.next`, and `.vinext`, along with deployment archives, logs, dependencies, and temporary working files, are intentionally excluded because they are recreated from the committed source.
 
 Contributor workflow:
 
 1. Start from the latest GitHub `main` branch.
 2. Make changes on a branch and open a pull request.
 3. Review and merge the pull request into `main`.
-4. Publish the exact merged commit to the production site.
+4. Cloudflare automatically builds and publishes the exact merged commit.
+
+## Cloudflare setup and handoff
+
+The WRITE AI Center should create and own the Cloudflare account used for production. A Cloudflare administrator can invite additional maintainers from **Manage Account → Members** without granting access to unrelated domains or billing.
+
+To connect the repository:
+
+1. In Cloudflare, open **Workers & Pages** and choose **Create application → Import a repository**.
+2. Select `AvniDoshi/write-ai-website` and use `main` as the production branch.
+3. Set the build command to `npm run build`.
+4. Set the deploy command to `npx wrangler deploy`.
+5. Set `NEXT_PUBLIC_SITE_URL` to `https://writeai.center` in the build environment.
+6. After the first successful deployment, attach `writeai.center` as the custom domain and verify it before retiring the previous host.
+
+For a manual deployment from an authenticated Cloudflare session, run `npm run deploy`.
