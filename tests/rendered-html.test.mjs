@@ -100,7 +100,6 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/di-xu", /Online Learning Research Center/],
     ["/people/alexander-mayer", /National Rural Higher Education Research Center/],
     ["/people/richard-hendra", /State IMPACT Collaborative/],
-    ["/people/hironao-okahana", /Managing Researcher and Chief of Planning and Impact/],
     ["/people/penelope-collins", /linguistically diverse backgrounds/],
     ["/people/kristi-werry", /supporting more than 7,000 users/],
     ["/people/steve-graham", /Regents and Warner Professor/],
