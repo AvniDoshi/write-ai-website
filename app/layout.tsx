@@ -3,7 +3,7 @@ import { SiteFooter, SiteHeader } from "./components/SiteShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://writeai.center"),
   title: {
     default: "WRITE AI Center | Writing Education in the Age of AI",
     template: "%s | WRITE AI Center",

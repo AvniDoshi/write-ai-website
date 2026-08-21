@@ -12,6 +12,12 @@ interface ExecutionContext {
 
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const url = new URL(request.url);
+    if (url.hostname === "www.writeai.center") {
+      url.hostname = "writeai.center";
+      return Response.redirect(url.toString(), 308);
+    }
+
     return handler.fetch(request, env, ctx);
   },
 };
