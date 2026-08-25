@@ -106,6 +106,7 @@ test("server-renders the newly completed people profiles", async () => {
     ["/people/anna-mills", /AI and College Writing/],
     ["/people/danielle-mcnamara", /Learning Engineering Institute/],
     ["/people/sabrina-look", /Director of Communications/],
+    ["/people/stephanie-tran", /Creative Writing Certificate Program/],
     ["/people/avni-doshi", /Web Engineering and Digital Experience Specialist/],
   ]) {
     const response = await render(path);
@@ -126,4 +127,12 @@ test("renders Sabrina Look with her current portrait", async () => {
   const response = await render("/people/sabrina-look");
   assert.equal(response.status, 200);
   assert.match(await response.text(), /sabrina-look\.jpg/);
+});
+
+test("renders Stephanie Tran with her profile photo", async () => {
+  const response = await render("/people/stephanie-tran");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Writing Advisor/);
+  assert.match(html, /stephanie-tran\.jpeg/);
 });
