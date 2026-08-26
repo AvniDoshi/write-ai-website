@@ -136,3 +136,9 @@ test("renders Stephanie Tran with her profile photo", async () => {
   assert.match(html, /Writing Advisor/);
   assert.match(html, /stephanie-tran\.jpeg/);
 });
+
+test("lists Stephanie Tran under Writing Advisors", async () => {
+  const response = await render("/people");
+  assert.equal(response.status, 200);
+  assert.match(await response.text(), /Writing Advisors[\s\S]*Stephanie Tran/);
+});
