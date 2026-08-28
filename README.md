@@ -2,6 +2,8 @@
 
 Public website and AI tools research directory for the WRITE AI Center.
 
+New contributors should follow the complete [beginner setup and publishing guide](docs/WEBSITE_SETUP_AND_PUBLISHING.md) for account access, tool installation, Codex, GitHub, Cloudflare, testing, deployment, verification, and rollback.
+
 ## What is included
 
 - Center homepage and visual design system
