@@ -83,7 +83,7 @@ h3 { line-height: 1.18; }
 .research-list { border-top: 1px solid var(--line); }
 .research-row { display: grid; grid-template-columns: 70px 1fr 1.4fr 40px; gap: 2rem; align-items: center; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
 .research-row > span { color: var(--orange); font-size: .72rem; font-weight: 800; }
-.research-row h3 { margin: 0; font-family: Georgia, serif; font-size: clamp(1.5rem, 2.5vw, 2.3rem); font-weight: 500; }
+.research-row h3 { margin: 0; font-family: "Montserrat", Arial, sans-serif; font-size: clamp(1.5rem, 2.5vw, 2.3rem); font-weight: 400; }
 .research-row p { margin: 0; color: var(--muted); }
 .research-row b { color: var(--blue); font-size: 1.5rem; transition: transform .2s; }
 .research-row:hover b { transform: translate(4px,-4px); }
