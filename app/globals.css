@@ -77,7 +77,7 @@ h3 { line-height: 1.18; }
 .three-grid { grid-template-columns: repeat(3, 1fr); }
 .function-card, .resource-card, .feature-card { min-height: 310px; padding: 2rem; background: var(--paper); }
 .card-index, .feature-card > span { display: block; margin-bottom: 4rem; color: var(--orange); font-size: .7rem; font-weight: 800; letter-spacing: .15em; }
-.function-card h3, .resource-card h3, .feature-card h3 { font-family: Georgia, serif; font-size: 1.55rem; font-weight: 500; }
+.function-card h3, .resource-card h3, .feature-card h3 { font-family: "Montserrat", Arial, sans-serif; font-size: 1.55rem; font-weight: 400; }
 .function-card p, .resource-card p, .feature-card p { color: var(--muted); }
 .research-section { background: var(--paper); }
 .research-list { border-top: 1px solid var(--line); }
