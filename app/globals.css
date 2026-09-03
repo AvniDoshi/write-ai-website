@@ -181,7 +181,7 @@ h3 { line-height: 1.18; }
 .news-video-play { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding-left: .15rem; border-radius: 50%; background: var(--orange); color: white; font-size: .85rem; }
 .news-video-launcher p { margin: 1rem 0 0; color: white; font-size: .85rem; }
 .news-empty { text-align: left; }
-.news-empty h3 { margin-bottom: .5rem; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 500; }
+.news-empty h3 { margin-bottom: .5rem; font-family: "Montserrat", Arial, sans-serif; font-size: 1.5rem; font-weight: 400; }
 .news-empty p { margin: 0; color: var(--muted); }
 .two-column-story { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; }
 .prose { max-width: 650px; color: var(--muted); font-size: 1.2rem; }
@@ -190,9 +190,9 @@ h3 { line-height: 1.18; }
 .mission-panel h2 { max-width: 1100px; margin: 0; font-size: clamp(2.5rem, 5vw, 5rem); }
 .formula { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); }
 .formula div { min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; border-right: 1px solid var(--line); background: var(--paper); }
-.formula strong { font-family: Georgia, serif; font-size: 1.7rem; }
+.formula strong { font-family: "Montserrat", Arial, sans-serif; font-size: 1.7rem; font-weight: 400; }
 .formula span { color: var(--muted); }
-.formula b { grid-column: 1/-1; padding: 1.5rem; background: var(--orange); color: white; font-family: Georgia, serif; font-size: 2rem; text-align: center; }
+.formula b { grid-column: 1/-1; padding: 1.5rem; background: var(--orange); color: white; font-family: "Montserrat", Arial, sans-serif; font-size: 2rem; font-weight: 700; text-align: center; }
 .questions-section { background: var(--paper); }
 .question-list article { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
 .question-list span { color: var(--orange); font-weight: 800; }
@@ -242,7 +242,7 @@ h3 { line-height: 1.18; }
 .tool-card dd { margin: .2rem 0 0; font-weight: 700; }
 .empty-state { padding: 4rem; border: 1px solid var(--line); background: var(--paper); text-align: center; }
 .audience-strip { display: grid; grid-template-columns: repeat(4,1fr); padding-top: 3rem; padding-bottom: 3rem; background: var(--ink-dark); color: white; }
-.audience-strip span { padding: 1rem; border-right: 1px solid rgba(255,255,255,.2); font-family: Georgia, serif; font-size: 1.3rem; text-align: center; }
+.audience-strip span { padding: 1rem; border-right: 1px solid rgba(255,255,255,.2); font-family: "Montserrat", Arial, sans-serif; font-size: 1.3rem; font-weight: 400; text-align: center; }
 .resource-library { display: grid; grid-template-columns: 280px 1fr; gap: 5vw; }
 .resource-library aside { display: grid; align-content: start; gap: .7rem; color: var(--muted); }
 .resource-list article { display: grid; grid-template-columns: 60px 1fr auto; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
@@ -253,12 +253,12 @@ h3 { line-height: 1.18; }
 .event-feature h2 { font-size: clamp(3rem, 6vw, 6rem); }
 .event-feature p:not(.eyebrow) { max-width: 700px; font-size: 1.2rem; }
 .event-date { display: grid; place-content: center; border-left: 1px solid rgba(255,255,255,.3); text-align: center; }
-.event-date strong { font-family: Georgia, serif; font-size: 5rem; }
+.event-date strong { font-family: "Montserrat", Arial, sans-serif; font-size: 5rem; font-weight: 400; }
 .event-date span { text-transform: uppercase; font-size: .7rem; letter-spacing: .12em; }
 .topic-grid { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--line); }
 .topic-grid div { min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .topic-grid span { color: var(--orange); font-size: .7rem; }
-.topic-grid strong { font-family: Georgia, serif; font-size: 1.3rem; }
+.topic-grid strong { font-family: "Montserrat", Arial, sans-serif; font-size: 1.3rem; font-weight: 400; }
 .channel-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); }
 .channel-grid article { min-height: 270px; padding: 2rem; background: var(--paper); }
 .channel-grid span { color: var(--orange); font-size: .7rem; font-weight: 800; }
@@ -268,17 +268,17 @@ h3 { line-height: 1.18; }
 .people-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); }
 .people-grid article { padding: 2rem; background: var(--paper); }
 .person-monogram { width: 100%; aspect-ratio: 4/3; display: grid; place-items: center; margin-bottom: 1.5rem; background: var(--sky); color: var(--blue); font-family: Georgia, serif; font-size: 3rem; }
-.people-grid h3 { margin-bottom: .4rem; font-family: Georgia, serif; font-size: 1.5rem; }
+.people-grid h3 { margin-bottom: .4rem; font-family: "Montserrat", Arial, sans-serif; font-size: 1.5rem; font-weight: 400; }
 .people-grid p { margin-bottom: .3rem; color: var(--muted); }
 .people-grid span { color: var(--orange); font-size: .75rem; font-weight: 700; }
 .advisor-band { display: grid; grid-template-columns: repeat(4,1fr); background: var(--blue); color: white; }
-.advisor-band p { margin: 0; padding: 2rem 1rem; border-right: 1px solid rgba(255,255,255,.25); font-family: Georgia, serif; font-size: 1.25rem; text-align: center; }
+.advisor-band p { margin: 0; padding: 2rem 1rem; border-right: 1px solid rgba(255,255,255,.25); font-family: "Montserrat", Arial, sans-serif; font-size: 1.25rem; font-weight: 400; text-align: center; }
 .large-partners { grid-template-columns: repeat(3,1fr); }
 .activity-section { background: var(--paper); }
 .activity-list { border-top: 1px solid var(--line); }
 .activity-list div { display: grid; grid-template-columns: 80px 1fr; gap: 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
 .activity-list span { color: var(--orange); font-size: .72rem; font-weight: 800; }
-.activity-list p { margin: 0; font-family: Georgia, serif; font-size: clamp(1.25rem, 2.2vw, 2rem); }
+.activity-list p { margin: 0; font-family: "Montserrat", Arial, sans-serif; font-size: clamp(1.25rem, 2.2vw, 2rem); font-weight: 400; }
 .organizations-section { background: var(--sky-light); }
 .funding-panel { display: grid; grid-template-columns: .8fr 1.2fr; gap: 7vw; padding: 6rem max(6vw, 1.5rem); background: var(--blue); color: white; }
 .funding-panel h2 { font-size: clamp(3rem, 6vw, 6rem); }
@@ -290,7 +290,7 @@ h3 { line-height: 1.18; }
 .event-card { display: grid; grid-template-columns: 190px 1fr; border: 1px solid var(--line); background: var(--paper); }
 .calendar-date { min-height: 240px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; background: var(--ink-dark); color: white; text-align: center; }
 .calendar-date span, .calendar-date small { color: var(--gold); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.calendar-date strong { margin: .5rem 0; font-family: Georgia, serif; font-size: 4.6rem; font-weight: 500; line-height: 1; }
+.calendar-date strong { margin: .5rem 0; font-family: "Montserrat", Arial, sans-serif; font-size: 4.6rem; font-weight: 400; line-height: 1; }
 .event-card-copy { padding: 2rem 2.5rem; }
 .event-card-copy h2 { margin: .5rem 0 1rem; font-size: clamp(2rem, 3.5vw, 3.4rem); }
 .event-card-copy > p:not(.resource-kicker) { max-width: 780px; color: var(--muted); }
